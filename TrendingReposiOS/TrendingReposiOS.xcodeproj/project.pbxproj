@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DB3C4A0A2964400C00D8AA9B /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */; };
-		DB3C4A0F2964400C00D8AA9B /* TrendingReposiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3C4A0E2964400C00D8AA9B /* TrendingReposiOSTests.swift */; };
-		DB3C4A102964400C00D8AA9B /* TrendingReposiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3C4A042964400B00D8AA9B /* TrendingReposiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,9 +22,7 @@
 
 /* Begin PBXFileReference section */
 		DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB3C4A042964400B00D8AA9B /* TrendingReposiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendingReposiOS.h; sourceTree = "<group>"; };
 		DB3C4A092964400C00D8AA9B /* TrendingReposiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB3C4A0E2964400C00D8AA9B /* TrendingReposiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposiOSTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +65,6 @@
 		DB3C4A032964400B00D8AA9B /* TrendingReposiOS */ = {
 			isa = PBXGroup;
 			children = (
-				DB3C4A042964400B00D8AA9B /* TrendingReposiOS.h */,
 			);
 			path = TrendingReposiOS;
 			sourceTree = "<group>";
@@ -77,7 +72,6 @@
 		DB3C4A0D2964400C00D8AA9B /* TrendingReposiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB3C4A0E2964400C00D8AA9B /* TrendingReposiOSTests.swift */,
 			);
 			path = TrendingReposiOSTests;
 			sourceTree = "<group>";
@@ -89,7 +83,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3C4A102964400C00D8AA9B /* TrendingReposiOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3C4A0F2964400C00D8AA9B /* TrendingReposiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
