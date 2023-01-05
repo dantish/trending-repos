@@ -6,10 +6,16 @@
 //
 
 import UIKit
+import Lottie
 
 public final class TrendingReposViewController: UIViewController {
 
     @IBOutlet private(set) weak var tableView: UITableView!
+    @IBOutlet private(set) weak var errorView: UIView!
+    @IBOutlet private(set) weak var errorAnimationView: LottieAnimationView!
+    @IBOutlet private(set) weak var errorTitle: UILabel!
+    @IBOutlet private(set) weak var errorMessage: UILabel!
+    @IBOutlet private(set) weak var retryButton: UIButton!
 
     private lazy var dataSource: UITableViewDiffableDataSource<Int, Int> = {
         .init(tableView: tableView) { (tableView, indexPath, _) in
@@ -21,10 +27,17 @@ public final class TrendingReposViewController: UIViewController {
         super.viewDidLoad()
 
         configureTableView()
+        configureRetryButton()
     }
 
     private func configureTableView() {
         tableView.dataSource = dataSource
+    }
+
+    private func configureRetryButton() {
+        retryButton.layer.cornerRadius = 6
+        retryButton.layer.borderColor = UIColor.systemGreen.cgColor
+        retryButton.layer.borderWidth = 1
     }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
@@ -37,6 +50,17 @@ public final class TrendingReposViewController: UIViewController {
         } else {
             dataSource.apply(snapshot)
         }
+    }
+
+    public func display(_ viewModel: TrendingReposErrorViewModel) {
+        errorAnimationView.animation = LottieAnimation.named("SomethingWentWrongAnimation", bundle: Bundle(for: Self.self))
+        errorAnimationView.loopMode = .loop
+        errorAnimationView.play()
+
+        errorTitle.text = viewModel.title
+        errorMessage.text = viewModel.message
+
+        errorView.isHidden = false
     }
 
 }

@@ -74,17 +74,91 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdb-YI-uvZ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-FL-VFM">
+                                        <rect key="frame" x="25" y="10" width="343" height="675"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="t7V-fq-raV">
+                                                <rect key="frame" x="0.0" y="151.99999999999997" width="343" height="371.33333333333326"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-h5-zab" customClass="LottieAnimationView" customModule="Lottie">
+                                                        <rect key="frame" x="21.666666666666657" y="0.0" width="300" height="300"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZQr-Mw-hsm">
+                                                        <rect key="frame" x="32.333333333333343" y="325" width="278.33333333333326" height="46.333333333333314"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIZ-rD-t49">
+                                                                <rect key="frame" x="0.0" y="0.0" width="278.33333333333331" height="20.333333333333332"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXJ-rr-Cbx">
+                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="278.33333333333331" height="18"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="t7V-fq-raV" secondAttribute="trailing" id="Qaf-UE-1su"/>
+                                            <constraint firstItem="t7V-fq-raV" firstAttribute="centerY" secondItem="O6h-FL-VFM" secondAttribute="centerY" id="bDr-e5-x9q"/>
+                                            <constraint firstItem="t7V-fq-raV" firstAttribute="leading" secondItem="O6h-FL-VFM" secondAttribute="leading" id="buG-tF-mcE"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iib-rN-Jgj">
+                                        <rect key="frame" x="25" y="695" width="343" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="LsJ-00-CDE"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="RETRY"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="RETRY">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="O6h-FL-VFM" firstAttribute="leading" secondItem="zdb-YI-uvZ" secondAttribute="leadingMargin" id="FYY-c7-uH5"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Iib-rN-Jgj" secondAttribute="bottom" constant="20" id="JHU-u3-jOK"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Iib-rN-Jgj" secondAttribute="trailing" id="Yc1-L8-A78"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="O6h-FL-VFM" secondAttribute="trailing" id="eWc-m1-7MQ"/>
+                                    <constraint firstItem="Iib-rN-Jgj" firstAttribute="leading" secondItem="zdb-YI-uvZ" secondAttribute="leadingMargin" id="mph-Ho-c9o"/>
+                                    <constraint firstItem="Iib-rN-Jgj" firstAttribute="top" secondItem="O6h-FL-VFM" secondAttribute="bottom" constant="10" id="okw-20-V0C"/>
+                                    <constraint firstItem="O6h-FL-VFM" firstAttribute="top" secondItem="zdb-YI-uvZ" secondAttribute="top" constant="10" id="qKY-m5-7Xs"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="25" bottom="0.0" right="25"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yo6-bZ-RQ7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Yo6-bZ-RQ7" firstAttribute="trailing" secondItem="zdb-YI-uvZ" secondAttribute="trailing" id="CPb-BZ-f9n"/>
                             <constraint firstItem="fZV-Zj-wWm" firstAttribute="top" secondItem="JQQ-Kk-zCB" secondAttribute="top" id="HX5-6N-keM"/>
+                            <constraint firstItem="Yo6-bZ-RQ7" firstAttribute="bottom" secondItem="zdb-YI-uvZ" secondAttribute="bottom" id="PJJ-0c-SYq"/>
                             <constraint firstAttribute="trailing" secondItem="fZV-Zj-wWm" secondAttribute="trailing" id="YHk-kj-cEB"/>
                             <constraint firstItem="fZV-Zj-wWm" firstAttribute="leading" secondItem="JQQ-Kk-zCB" secondAttribute="leading" id="a0m-VA-cJP"/>
                             <constraint firstAttribute="bottom" secondItem="fZV-Zj-wWm" secondAttribute="bottom" id="dgr-Yf-anb"/>
+                            <constraint firstItem="zdb-YI-uvZ" firstAttribute="leading" secondItem="Yo6-bZ-RQ7" secondAttribute="leading" id="nHP-ID-QzN"/>
+                            <constraint firstItem="zdb-YI-uvZ" firstAttribute="top" secondItem="Yo6-bZ-RQ7" secondAttribute="top" id="x4P-4a-W44"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorAnimationView" destination="FyT-h5-zab" id="Z5j-nT-kyP"/>
+                        <outlet property="errorMessage" destination="qXJ-rr-Cbx" id="0gp-xQ-ovH"/>
+                        <outlet property="errorTitle" destination="kIZ-rD-t49" id="xo9-vr-PSX"/>
+                        <outlet property="errorView" destination="zdb-YI-uvZ" id="bad-H6-msb"/>
+                        <outlet property="retryButton" destination="Iib-rN-Jgj" id="auk-X2-ArL"/>
                         <outlet property="tableView" destination="fZV-Zj-wWm" id="M27-D6-VWW"/>
                     </connections>
                 </viewController>
@@ -93,12 +167,20 @@
             <point key="canvasLocation" x="-883.20610687022895" y="-40.140845070422536"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="FyT-h5-zab">
+            <size key="intrinsicContentSize" width="300" height="300"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

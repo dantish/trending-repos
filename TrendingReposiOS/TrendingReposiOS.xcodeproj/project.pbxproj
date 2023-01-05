@@ -16,7 +16,12 @@
 		DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */; };
 		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
 		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
+		DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */; };
+		DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */; };
+		DB123B702965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6E2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png */; };
 		DB3C4A0A2964400C00D8AA9B /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */; };
+		DB55293229660AC700DBA07E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DB55293129660AC700DBA07E /* Lottie */; };
+		DB55293529660CA300DBA07E /* SomethingWentWrongAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,12 @@
 		DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_light.png; sourceTree = "<group>"; };
 		DB123B672965D6A20023FF02 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_dark.png; sourceTree = "<group>"; };
+		DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorViewModel.swift; sourceTree = "<group>"; };
+		DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_ERROR_STATE_light.png; sourceTree = "<group>"; };
+		DB123B6E2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_ERROR_STATE_dark.png; sourceTree = "<group>"; };
 		DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3C4A092964400C00D8AA9B /* TrendingReposiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SomethingWentWrongAnimation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB55293229660AC700DBA07E /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 			children = (
 				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
 				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
+				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +105,8 @@
 			children = (
 				DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */,
 				DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */,
+				DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */,
+				DB123B6E2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png */,
 			);
 			path = snapshots;
 			sourceTree = "<group>";
@@ -121,6 +134,7 @@
 			children = (
 				DB03948A29644DF20018786C /* Controllers */,
 				DB03948929644DEB0018786C /* Views */,
+				DB55293329660C8300DBA07E /* Assets */,
 			);
 			path = TrendingReposiOS;
 			sourceTree = "<group>";
@@ -133,6 +147,14 @@
 				DB039485296449200018786C /* TrendingReposSnapshotTests.swift */,
 			);
 			path = TrendingReposiOSTests;
+			sourceTree = "<group>";
+		};
+		DB55293329660C8300DBA07E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +184,9 @@
 			dependencies = (
 			);
 			name = TrendingReposiOS;
+			packageProductDependencies = (
+				DB55293129660AC700DBA07E /* Lottie */,
+			);
 			productName = TrendingReposiOS;
 			productReference = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */;
 			productType = "com.apple.product-type.framework";
@@ -213,6 +238,9 @@
 				Base,
 			);
 			mainGroup = DB3C49F72964400B00D8AA9B;
+			packageReferences = (
+				DB55293029660AC700DBA07E /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = DB3C4A022964400B00D8AA9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -228,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB55293529660CA300DBA07E /* SomethingWentWrongAnimation.json in Resources */,
 				DB03948829644DAF0018786C /* TrendingRepos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */,
+				DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */,
 				DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */,
+				DB123B702965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +281,7 @@
 			files = (
 				DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
+				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
 				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +564,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB55293029660AC700DBA07E /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB55293129660AC700DBA07E /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB55293029660AC700DBA07E /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB3C49F82964400B00D8AA9B /* Project object */;
 }
