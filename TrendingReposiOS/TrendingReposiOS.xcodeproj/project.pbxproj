@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		DB03947F296445B90018786C /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03947D296445B90018786C /* XCTestCase+Snapshot.swift */; };
 		DB039480296445B90018786C /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03947E296445B90018786C /* UIViewController+Snapshot.swift */; };
+		DB039486296449200018786C /* TrendingReposSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB039485296449200018786C /* TrendingReposSnapshotTests.swift */; };
+		DB03948829644DAF0018786C /* TrendingRepos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03948729644DAF0018786C /* TrendingRepos.storyboard */; };
+		DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948B29644E020018786C /* TrendingReposViewController.swift */; };
+		DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */; };
+		DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */; };
+		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
+		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
 		DB3C4A0A2964400C00D8AA9B /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		DB03947D296445B90018786C /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		DB03947E296445B90018786C /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		DB039485296449200018786C /* TrendingReposSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSnapshotTests.swift; sourceTree = "<group>"; };
+		DB03948729644DAF0018786C /* TrendingRepos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendingRepos.storyboard; sourceTree = "<group>"; };
+		DB03948B29644E020018786C /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposLoadingViewModel.swift; sourceTree = "<group>"; };
+		DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_light.png; sourceTree = "<group>"; };
+		DB123B672965D6A20023FF02 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_dark.png; sourceTree = "<group>"; };
 		DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3C4A092964400C00D8AA9B /* TrendingReposiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,6 +71,33 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		DB03948929644DEB0018786C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB123B672965D6A20023FF02 /* RoundedView.swift */,
+				DB03948729644DAF0018786C /* TrendingRepos.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB03948A29644DF20018786C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
+				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB03948F296450010018786C /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */,
+				DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */,
+			);
+			path = snapshots;
+			sourceTree = "<group>";
+		};
 		DB3C49F72964400B00D8AA9B = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +119,8 @@
 		DB3C4A032964400B00D8AA9B /* TrendingReposiOS */ = {
 			isa = PBXGroup;
 			children = (
+				DB03948A29644DF20018786C /* Controllers */,
+				DB03948929644DEB0018786C /* Views */,
 			);
 			path = TrendingReposiOS;
 			sourceTree = "<group>";
@@ -86,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				DB039483296446D90018786C /* Helpers */,
+				DB03948F296450010018786C /* snapshots */,
+				DB039485296449200018786C /* TrendingReposSnapshotTests.swift */,
 			);
 			path = TrendingReposiOSTests;
 			sourceTree = "<group>";
@@ -183,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB03948829644DAF0018786C /* TrendingRepos.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +236,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */,
+				DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */,
+				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
+				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB039480296445B90018786C /* UIViewController+Snapshot.swift in Sources */,
+				DB039486296449200018786C /* TrendingReposSnapshotTests.swift in Sources */,
 				DB03947F296445B90018786C /* XCTestCase+Snapshot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +457,7 @@
 		DB3C4A172964400C00D8AA9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -428,6 +481,7 @@
 		DB3C4A182964400C00D8AA9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

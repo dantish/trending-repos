@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8l2-on-RtW">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trending Repos View Controller-->
+        <scene sceneID="MCE-Xr-Xl8">
+            <objects>
+                <viewController id="8l2-on-RtW" customClass="TrendingReposViewController" customModule="TrendingReposiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQQ-Kk-zCB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="85" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fZV-Zj-wWm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrendingRepoLoadingCell" id="Mi4-4L-FZU">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="85.333335876464844"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mi4-4L-FZU" id="P2b-KJ-YG2">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="85.333335876464844"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sNg-hX-XES" customClass="RoundedView" customModule="TrendingReposiOS" customModuleProvider="target">
+                                                    <rect key="frame" x="50" y="25" width="35" height="35"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="M0b-Kx-NqD"/>
+                                                        <constraint firstAttribute="width" constant="35" id="lbu-BW-NOF"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NQV-vC-JUp">
+                                                    <rect key="frame" x="110" y="25" width="258" height="35"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNC-zL-aI1" customClass="RoundedView" customModule="TrendingReposiOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="10"/>
+                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="2aF-iS-rxn"/>
+                                                                <constraint firstAttribute="height" constant="10" id="tuW-S4-JXP"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a5-p6-105" customClass="RoundedView" customModule="TrendingReposiOS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="25" width="258" height="10"/>
+                                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="10" id="EP8-Dv-XnE"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="3a5-p6-105" secondAttribute="trailing" id="ahJ-3b-s3h"/>
+                                                        <constraint firstItem="3a5-p6-105" firstAttribute="leading" secondItem="NQV-vC-JUp" secondAttribute="leading" id="uzi-lp-Ysi"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sNg-hX-XES" firstAttribute="top" secondItem="P2b-KJ-YG2" secondAttribute="topMargin" id="JTR-FO-SaV"/>
+                                                <constraint firstItem="NQV-vC-JUp" firstAttribute="top" secondItem="P2b-KJ-YG2" secondAttribute="topMargin" id="LC7-PD-kIz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NQV-vC-JUp" secondAttribute="bottom" priority="999" id="XpX-oA-32G"/>
+                                                <constraint firstItem="sNg-hX-XES" firstAttribute="leading" secondItem="P2b-KJ-YG2" secondAttribute="leadingMargin" constant="25" id="aVs-3K-dbr"/>
+                                                <constraint firstItem="NQV-vC-JUp" firstAttribute="leading" secondItem="sNg-hX-XES" secondAttribute="trailing" constant="25" id="h6c-pD-Nrd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NQV-vC-JUp" secondAttribute="trailing" id="tTR-tg-A2d"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="25" left="25" bottom="25" right="25"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yo6-bZ-RQ7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fZV-Zj-wWm" firstAttribute="top" secondItem="JQQ-Kk-zCB" secondAttribute="top" id="HX5-6N-keM"/>
+                            <constraint firstAttribute="trailing" secondItem="fZV-Zj-wWm" secondAttribute="trailing" id="YHk-kj-cEB"/>
+                            <constraint firstItem="fZV-Zj-wWm" firstAttribute="leading" secondItem="JQQ-Kk-zCB" secondAttribute="leading" id="a0m-VA-cJP"/>
+                            <constraint firstAttribute="bottom" secondItem="fZV-Zj-wWm" secondAttribute="bottom" id="dgr-Yf-anb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fZV-Zj-wWm" id="M27-D6-VWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sgb-V0-vB9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-883.20610687022895" y="-40.140845070422536"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
