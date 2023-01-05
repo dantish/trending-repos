@@ -7,7 +7,9 @@
 
 import UIKit
 
-public class TrendingReposViewController: UITableViewController {
+public final class TrendingReposViewController: UIViewController {
+
+    @IBOutlet private(set) weak var tableView: UITableView!
 
     private lazy var dataSource: UITableViewDiffableDataSource<Int, Int> = {
         .init(tableView: tableView) { (tableView, indexPath, _) in
