@@ -10,13 +10,13 @@ import Lottie
 
 public final class TrendingReposViewController: UIViewController {
 
-    enum DataSourceItem: Hashable {
-        case loading(Int)
-        case content(TrendingRepoViewModel)
-    }
-
     private typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
     private typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
+
+    enum DataSourceItem: Hashable {
+        case loading(Int)
+        case content(TrendingRepoCellController)
+    }
 
     private lazy var dataSource: DataSource = {
         .init(tableView: tableView) { (tableView, indexPath, item) in
@@ -24,17 +24,11 @@ public final class TrendingReposViewController: UIViewController {
             case .loading:
                 return tableView.dequeueReusableCell(withIdentifier: "TrendingRepoLoadingCell", for: indexPath)
 
-            case let .content(repoViewModel):
-                let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingRepoCell", for: indexPath) as! TrendingRepoCell
-                cell.nameLabel.text = repoViewModel.name
-                cell.ownerNameLabel.text = repoViewModel.ownerName
-                cell.ownerAvatarImageView.image = repoViewModel.ownerAvatar
-                return cell
+            case let .content(cellController):
+                return cellController.tableView(tableView, cellForRowAt: indexPath)
             }
         }
     }()
-
-    private var numberOfLoadingCells: Int { 20 }
 
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var errorView: TrendingReposErrorView!
@@ -49,13 +43,15 @@ public final class TrendingReposViewController: UIViewController {
         tableView.dataSource = dataSource
     }
 
-    public func display(_ viewModels: [TrendingRepoViewModel]) {
+    public func display(_ items: [TrendingRepoCellController]) {
         var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(viewModels.map(DataSourceItem.content), toSection: 0)
+        snapshot.appendItems(items.map(DataSourceItem.content), toSection: 0)
 
         dataSource.applySnapshotWithReload(snapshot)
     }
+
+    private var numberOfLoadingCells: Int { 20 }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
         var snapshot = DataSourceSnapshot()

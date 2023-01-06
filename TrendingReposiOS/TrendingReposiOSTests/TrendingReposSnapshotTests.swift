@@ -132,3 +132,9 @@ final class TrendingReposSnapshotTests: XCTestCase {
     }
 
 }
+
+private extension TrendingReposViewController {
+    func display(_ viewModels: [TrendingRepoViewModel]) {
+        display(viewModels.map(TrendingRepoCellController.init))
+    }
+}

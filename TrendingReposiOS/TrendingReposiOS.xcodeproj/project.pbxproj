@@ -29,6 +29,7 @@
 		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
 		DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */; };
 		DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */; };
+		DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorView.swift; sourceTree = "<group>"; };
 		DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDiffableDataSource+Extensions.swift"; sourceTree = "<group>"; };
+		DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
+				DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */,
 				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
 				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
 				DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */,
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */,
 				DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
 				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
