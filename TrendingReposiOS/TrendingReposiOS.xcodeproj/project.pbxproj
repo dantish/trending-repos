@@ -28,6 +28,7 @@
 		DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */; };
 		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
 		DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */; };
+		DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
 		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 		DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorView.swift; sourceTree = "<group>"; };
+		DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDiffableDataSource+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		DB3C4A032964400B00D8AA9B /* TrendingReposiOS */ = {
 			isa = PBXGroup;
 			children = (
+				DB5529432968C88300DBA07E /* Helpers */,
 				DB03948A29644DF20018786C /* Controllers */,
 				DB03948929644DEB0018786C /* Views */,
 				DB55293329660C8300DBA07E /* Assets */,
@@ -181,6 +184,14 @@
 				DB55293729682B2F00DBA07E /* TestAssets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		DB5529432968C88300DBA07E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */,
+				DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */,
 				DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */,
 				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
 			);

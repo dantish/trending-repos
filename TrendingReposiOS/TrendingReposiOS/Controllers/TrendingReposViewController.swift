@@ -52,11 +52,7 @@ public final class TrendingReposViewController: UIViewController {
         snapshot.appendSections([0])
         snapshot.appendItems(viewModels.map(DataSourceItem.content), toSection: 0)
 
-        if #available(iOS 15.0, *) {
-            dataSource.applySnapshotUsingReloadData(snapshot)
-        } else {
-            dataSource.apply(snapshot)
-        }
+        dataSource.applySnapshotWithReload(snapshot)
     }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
@@ -64,11 +60,7 @@ public final class TrendingReposViewController: UIViewController {
         snapshot.appendSections([0])
         snapshot.appendItems((0..<20).map(DataSourceItem.loading), toSection: 0)
 
-        if #available(iOS 15.0, *) {
-            dataSource.applySnapshotUsingReloadData(snapshot)
-        } else {
-            dataSource.apply(snapshot)
-        }
+        dataSource.applySnapshotWithReload(snapshot)
     }
 
     public func display(_ viewModel: TrendingReposErrorViewModel) {
