@@ -32,7 +32,7 @@ final class TrendingReposSnapshotTests: XCTestCase {
     func test_trendingReposWithErrorState() {
         let sut = makeSUT()
 
-        sut.display(TrendingReposErrorViewModel(
+        sut.display(.error(
             title: "Something went wrong..",
             message: "An alien is probably blocking your signal."
         ))
@@ -44,7 +44,26 @@ final class TrendingReposSnapshotTests: XCTestCase {
     func test_trendingReposWithContent() {
         let sut = makeSUT()
 
-        sut.display([
+        sut.display(trendingRepos())
+
+        assert(snapshot: sut.snapshot(for: .iPhone14Pro(style: .light)), named: "TRENDING_REPOS_WITH_CONTENT_light")
+        assert(snapshot: sut.snapshot(for: .iPhone14Pro(style: .dark)), named: "TRENDING_REPOS_WITH_CONTENT_dark")
+    }
+
+    // MARK: - Helpers
+
+    private func makeSUT() -> TrendingReposViewController {
+        let bundle = Bundle(for: TrendingReposViewController.self)
+        let storyboard = UIStoryboard(name: "TrendingRepos", bundle: bundle)
+        let controller = storyboard.instantiateInitialViewController() as! TrendingReposViewController
+        controller.loadViewIfNeeded()
+        controller.tableView.showsVerticalScrollIndicator = false
+        controller.tableView.showsHorizontalScrollIndicator = false
+        return controller
+    }
+
+    private func trendingRepos() -> [TrendingRepoViewModel] {
+        [
             TrendingRepoViewModel(
                 name: "retinaface",
                 description: "The remake of the https://github.com/biubug6/Pytorch_Retinaface",
@@ -109,22 +128,7 @@ final class TrendingReposSnapshotTests: XCTestCase {
                 ownerName: "google",
                 ownerAvatar: UIImage(named: "avatar-8", in: Bundle(for: Self.self), with: nil)!
             )
-        ])
-
-        assert(snapshot: sut.snapshot(for: .iPhone14Pro(style: .light)), named: "TRENDING_REPOS_WITH_CONTENT_light")
-        assert(snapshot: sut.snapshot(for: .iPhone14Pro(style: .dark)), named: "TRENDING_REPOS_WITH_CONTENT_dark")
-    }
-
-    // MARK: - Helpers
-
-    private func makeSUT() -> TrendingReposViewController {
-        let bundle = Bundle(for: TrendingReposViewController.self)
-        let storyboard = UIStoryboard(name: "TrendingRepos", bundle: bundle)
-        let controller = storyboard.instantiateInitialViewController() as! TrendingReposViewController
-        controller.loadViewIfNeeded()
-        controller.tableView.showsVerticalScrollIndicator = false
-        controller.tableView.showsHorizontalScrollIndicator = false
-        return controller
+        ]
     }
 
 }
