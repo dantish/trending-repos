@@ -34,6 +34,8 @@ public final class TrendingReposViewController: UIViewController {
         }
     }()
 
+    private var numberOfLoadingCells: Int { 20 }
+
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var errorView: TrendingReposErrorView!
 
@@ -58,7 +60,7 @@ public final class TrendingReposViewController: UIViewController {
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
         var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems((0..<20).map(DataSourceItem.loading), toSection: 0)
+        snapshot.appendItems((0..<numberOfLoadingCells).map(DataSourceItem.loading), toSection: 0)
 
         dataSource.applySnapshotWithReload(snapshot)
     }
