@@ -135,7 +135,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdb-YI-uvZ">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdb-YI-uvZ" customClass="TrendingReposErrorView" customModule="TrendingReposiOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-FL-VFM">
@@ -199,6 +199,12 @@
                                     <constraint firstItem="O6h-FL-VFM" firstAttribute="top" secondItem="zdb-YI-uvZ" secondAttribute="top" constant="10" id="qKY-m5-7Xs"/>
                                 </constraints>
                                 <edgeInsets key="layoutMargins" top="0.0" left="25" bottom="0.0" right="25"/>
+                                <connections>
+                                    <outlet property="animationView" destination="FyT-h5-zab" id="hmr-BV-PNL"/>
+                                    <outlet property="messageLabel" destination="qXJ-rr-Cbx" id="stZ-8E-Efq"/>
+                                    <outlet property="retryButton" destination="Iib-rN-Jgj" id="8RQ-cN-eBk"/>
+                                    <outlet property="titleLabel" destination="kIZ-rD-t49" id="JNq-0t-91G"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yo6-bZ-RQ7"/>
@@ -215,11 +221,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="errorAnimationView" destination="FyT-h5-zab" id="Z5j-nT-kyP"/>
-                        <outlet property="errorMessage" destination="qXJ-rr-Cbx" id="0gp-xQ-ovH"/>
-                        <outlet property="errorTitle" destination="kIZ-rD-t49" id="xo9-vr-PSX"/>
                         <outlet property="errorView" destination="zdb-YI-uvZ" id="bad-H6-msb"/>
-                        <outlet property="retryButton" destination="Iib-rN-Jgj" id="auk-X2-ArL"/>
                         <outlet property="tableView" destination="fZV-Zj-wWm" id="M27-D6-VWW"/>
                     </connections>
                 </viewController>

@@ -27,6 +27,7 @@
 		DB55293D296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */; };
 		DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */; };
 		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
+		DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_dark.png; sourceTree = "<group>"; };
 		DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
 		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
+		DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				DB123B672965D6A20023FF02 /* RoundedView.swift */,
 				DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */,
+				DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */,
 				DB03948729644DAF0018786C /* TrendingRepos.storyboard */,
 			);
 			path = Views;
@@ -309,6 +312,7 @@
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
 				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */,
+				DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */,
 				DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */,
 				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
 			);
