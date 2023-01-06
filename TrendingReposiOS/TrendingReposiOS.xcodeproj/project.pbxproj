@@ -22,6 +22,11 @@
 		DB3C4A0A2964400C00D8AA9B /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */; };
 		DB55293229660AC700DBA07E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DB55293129660AC700DBA07E /* Lottie */; };
 		DB55293529660CA300DBA07E /* SomethingWentWrongAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */; };
+		DB55293829682B2F00DBA07E /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55293729682B2F00DBA07E /* TestAssets.xcassets */; };
+		DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */; };
+		DB55293D296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */; };
+		DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */; };
+		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3C4A092964400C00D8AA9B /* TrendingReposiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SomethingWentWrongAnimation.json; sourceTree = "<group>"; };
+		DB55293729682B2F00DBA07E /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
+		DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
+		DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_dark.png; sourceTree = "<group>"; };
+		DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
+		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DB123B672965D6A20023FF02 /* RoundedView.swift */,
+				DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */,
 				DB03948729644DAF0018786C /* TrendingRepos.storyboard */,
 			);
 			path = Views;
@@ -96,6 +107,7 @@
 				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
 				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
 				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
+				DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,8 +117,10 @@
 			children = (
 				DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */,
 				DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */,
-				DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */,
 				DB123B6E2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png */,
+				DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */,
+				DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */,
+				DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */,
 			);
 			path = snapshots;
 			sourceTree = "<group>";
@@ -143,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				DB039483296446D90018786C /* Helpers */,
+				DB55293629682B0900DBA07E /* Assets */,
 				DB03948F296450010018786C /* snapshots */,
 				DB039485296449200018786C /* TrendingReposSnapshotTests.swift */,
 			);
@@ -153,6 +168,14 @@
 			isa = PBXGroup;
 			children = (
 				DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		DB55293629682B0900DBA07E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DB55293729682B2F00DBA07E /* TestAssets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -265,9 +288,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */,
 				DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */,
 				DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */,
 				DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */,
+				DB55293829682B2F00DBA07E /* TestAssets.xcassets in Resources */,
+				DB55293D296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png in Resources */,
 				DB123B702965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +308,8 @@
 				DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
 				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
+				DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */,
+				DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */,
 				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

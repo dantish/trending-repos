@@ -10,18 +10,36 @@ import Lottie
 
 public final class TrendingReposViewController: UIViewController {
 
+    enum DataSourceItem: Hashable {
+        case loading(Int)
+        case content(TrendingRepoViewModel)
+    }
+
+    private typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
+    private typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
+
+    private lazy var dataSource: DataSource = {
+        .init(tableView: tableView) { (tableView, indexPath, item) in
+            switch item {
+            case .loading:
+                return tableView.dequeueReusableCell(withIdentifier: "TrendingRepoLoadingCell", for: indexPath)
+
+            case let .content(repoViewModel):
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingRepoCell", for: indexPath) as! TrendingRepoCell
+                cell.nameLabel.text = repoViewModel.name
+                cell.ownerNameLabel.text = repoViewModel.ownerName
+                cell.ownerAvatarImageView.image = repoViewModel.ownerAvatar
+                return cell
+            }
+        }
+    }()
+
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var errorView: UIView!
     @IBOutlet private(set) weak var errorAnimationView: LottieAnimationView!
     @IBOutlet private(set) weak var errorTitle: UILabel!
     @IBOutlet private(set) weak var errorMessage: UILabel!
     @IBOutlet private(set) weak var retryButton: UIButton!
-
-    private lazy var dataSource: UITableViewDiffableDataSource<Int, Int> = {
-        .init(tableView: tableView) { (tableView, indexPath, _) in
-            tableView.dequeueReusableCell(withIdentifier: "TrendingRepoLoadingCell", for: indexPath)
-        }
-    }()
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +58,22 @@ public final class TrendingReposViewController: UIViewController {
         retryButton.layer.borderWidth = 1
     }
 
-    public func display(_ viewModel: TrendingReposLoadingViewModel) {
-        var snapshot = NSDiffableDataSourceSnapshot<Int, Int>()
+    public func display(_ viewModels: [TrendingRepoViewModel]) {
+        var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])
-        snapshot.appendItems(Array(0..<20), toSection: 0)
+        snapshot.appendItems(viewModels.map(DataSourceItem.content), toSection: 0)
+
+        if #available(iOS 15.0, *) {
+            dataSource.applySnapshotUsingReloadData(snapshot)
+        } else {
+            dataSource.apply(snapshot)
+        }
+    }
+
+    public func display(_ viewModel: TrendingReposLoadingViewModel) {
+        var snapshot = DataSourceSnapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems((0..<20).map(DataSourceItem.loading), toSection: 0)
 
         if #available(iOS 15.0, *) {
             dataSource.applySnapshotUsingReloadData(snapshot)
