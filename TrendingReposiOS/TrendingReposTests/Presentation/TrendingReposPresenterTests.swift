@@ -33,32 +33,7 @@ final class TrendingReposPresenterTests: XCTestCase {
 
     func test_didFinishLoadingRepos_displaysReposAndStopsLoading() {
         let (sut, view) = makeSUT()
-        let repos = [
-            Repo(
-                id: UUID(),
-                name: "any name",
-                description: "any description",
-                language: "any language",
-                starsCount: 100,
-                owner: RepoOwner(
-                    id: UUID(),
-                    username: "any username",
-                    avatarUrl: URL(string: "http://any-url.com")!
-                )
-            ),
-            Repo(
-                id: UUID(),
-                name: "any name",
-                description: "any description",
-                language: "any language",
-                starsCount: 100,
-                owner: RepoOwner(
-                    id: UUID(),
-                    username: "any username",
-                    avatarUrl: URL(string: "http://any-url.com")!
-                )
-            )
-        ]
+        let repos = [uniqueRepo(), uniqueRepo()]
 
         sut.didFinishLoadingRepos(with: repos)
 
@@ -74,6 +49,21 @@ final class TrendingReposPresenterTests: XCTestCase {
         let view = ViewSpy()
         let sut = TrendingReposPresenter(reposView: view, loadingView: view, errorView: view)
         return (sut, view)
+    }
+
+    private func uniqueRepo() -> Repo {
+        Repo(
+            id: UUID(),
+            name: "any name",
+            description: "any description",
+            language: "any language",
+            starsCount: 100,
+            owner: RepoOwner(
+                id: UUID(),
+                username: "any username",
+                avatarUrl: URL(string: "http://any-url.com")!
+            )
+        )
     }
 
     private class ViewSpy: TrendingReposView, TrendingReposLoadingView, TrendingReposErrorView {
