@@ -31,6 +31,43 @@ final class TrendingReposPresenterTests: XCTestCase {
         ])
     }
 
+    func test_didFinishLoadingRepos_displaysReposAndStopsLoading() {
+        let (sut, view) = makeSUT()
+        let repos = [
+            Repo(
+                id: UUID(),
+                name: "any name",
+                description: "any description",
+                language: "any language",
+                starsCount: 100,
+                owner: RepoOwner(
+                    id: UUID(),
+                    username: "any username",
+                    avatarUrl: URL(string: "http://any-url.com")!
+                )
+            ),
+            Repo(
+                id: UUID(),
+                name: "any name",
+                description: "any description",
+                language: "any language",
+                starsCount: 100,
+                owner: RepoOwner(
+                    id: UUID(),
+                    username: "any username",
+                    avatarUrl: URL(string: "http://any-url.com")!
+                )
+            )
+        ]
+
+        sut.didFinishLoadingRepos(with: repos)
+
+        XCTAssertEqual(view.messages, [
+            .display(repos: repos),
+            .display(isLoading: false)
+        ])
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposPresenter, view: ViewSpy) {

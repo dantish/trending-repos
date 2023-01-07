@@ -36,4 +36,9 @@ public final class TrendingReposPresenter {
         errorView.display(.noError)
         loadingView.display(TrendingReposLoadingViewModel(isLoading: true))
     }
+
+    public func didFinishLoadingRepos(with repos: [Repo]) {
+        reposView.display(TrendingReposViewModel(repos: repos))
+        loadingView.display(TrendingReposLoadingViewModel(isLoading: false))
+    }
 }
