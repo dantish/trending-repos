@@ -16,6 +16,22 @@ class TrendingRepoPresenterTests: XCTestCase {
         XCTAssertTrue(view.messages.isEmpty, "Expected no view messages")
     }
 
+    func test_didStartLoadingAvatarImageData_displaysRepoWithLoadingAvatarImage() {
+        let (sut, view) = makeSUT()
+        let repo = uniqueRepo()
+
+        sut.didStartLoadingAvatarImageData(for: repo)
+
+        let message = view.messages.first
+        XCTAssertEqual(view.messages.count, 1)
+        XCTAssertEqual(message?.name, repo.name)
+        XCTAssertEqual(message?.description, repo.description)
+        XCTAssertEqual(message?.language, repo.language)
+        XCTAssertEqual(message?.starsCount, String(repo.starsCount))
+        XCTAssertEqual(message?.ownerName, repo.owner.username)
+        XCTAssertNil(message?.ownerAvatar)
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingRepoPresenter<ViewSpy, AnyImage>, view: ViewSpy) {
@@ -24,6 +40,25 @@ class TrendingRepoPresenterTests: XCTestCase {
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
+    }
+
+    private func anyURL() -> URL {
+        URL(string: "http://any-url.com")!
+    }
+
+    private func uniqueRepo() -> Repo {
+        Repo(
+            id: UUID(),
+            name: "any name",
+            description: "any description",
+            language: "any language",
+            starsCount: 100,
+            owner: RepoOwner(
+                id: UUID(),
+                username: "any username",
+                avatarUrl: anyURL()
+            )
+        )
     }
 
     private struct AnyImage {}

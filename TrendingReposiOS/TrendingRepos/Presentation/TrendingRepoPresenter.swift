@@ -14,5 +14,19 @@ public protocol TrendingRepoView {
 }
 
 public final class TrendingRepoPresenter<View: TrendingRepoView, AvatarImage> where View.AvatarImage == AvatarImage {
-    public init(view: View) {}
+    private let view: View
+
+    public init(view: View) {
+        self.view = view
+    }
+
+    public func didStartLoadingAvatarImageData(for repo: Repo) {
+        view.display(TrendingRepoViewModel(
+            name: repo.name,
+            description: repo.description,
+            language: repo.language,
+            starsCount: String(repo.starsCount),
+            ownerName: repo.owner.username,
+            ownerAvatar: nil))
+    }
 }
