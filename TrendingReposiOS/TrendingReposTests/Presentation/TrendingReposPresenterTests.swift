@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import TrendingRepos
+@testable import TrendingRepos
 
 final class TrendingReposPresenterTests: XCTestCase {
 
@@ -39,6 +39,20 @@ final class TrendingReposPresenterTests: XCTestCase {
 
         XCTAssertEqual(view.messages, [
             .display(repos: repos),
+            .display(isLoading: false)
+        ])
+    }
+
+    func test_didFinishLoadingReposWithError_displaysErrorMessageAndStopsLoading() {
+        let (sut, view) = makeSUT()
+
+        sut.didFinishLoadingRepos(with: NSError(domain: "any error", code: 0))
+
+        XCTAssertEqual(view.messages, [
+            .display(
+                errorTitle: TrendingReposPresenter.reposLoadErrorTitle,
+                errorMessage: TrendingReposPresenter.reposLoadErrorMessage
+            ),
             .display(isLoading: false)
         ])
     }

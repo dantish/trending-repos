@@ -30,6 +30,9 @@ public final class TrendingReposPresenter {
         self.errorView = errorView
     }
 
+    static var reposLoadErrorTitle: String { "Something went wrong.." }
+    static var reposLoadErrorMessage: String { "An alien is probably blocking your signal." }
+
     public static var title: String { "Trending" }
 
     public func didStartLoadingRepos() {
@@ -39,6 +42,14 @@ public final class TrendingReposPresenter {
 
     public func didFinishLoadingRepos(with repos: [Repo]) {
         reposView.display(TrendingReposViewModel(repos: repos))
+        loadingView.display(TrendingReposLoadingViewModel(isLoading: false))
+    }
+
+    public func didFinishLoadingRepos(with error: Error) {
+        errorView.display(.error(
+            title: Self.reposLoadErrorTitle,
+            message: Self.reposLoadErrorMessage
+        ))
         loadingView.display(TrendingReposLoadingViewModel(isLoading: false))
     }
 }
