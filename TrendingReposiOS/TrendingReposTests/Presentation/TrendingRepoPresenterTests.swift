@@ -33,7 +33,7 @@ class TrendingRepoPresenterTests: XCTestCase {
     }
 
     func test_didFinishLoadingAvatarImageData_displaysRepoWithoutAvatarImageOnFailedImageTransformation() {
-        let (sut, view) = makeSUT(avatarImageTransformer: { _ in nil })
+        let (sut, view) = makeSUT(avatarImageTransformer: fail)
         let repo = uniqueRepo()
 
         sut.didFinishLoadingAvatarImageData(with: Data(), for: repo)
@@ -93,6 +93,10 @@ class TrendingRepoPresenterTests: XCTestCase {
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
+    }
+
+    private var fail: (Data) -> AnyImage? {
+        return { _ in nil }
     }
 
     private struct AnyImage: Equatable {}
