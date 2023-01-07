@@ -48,12 +48,8 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
         let sut = TrendingReposUIComposer.trendingReposComposedWith(reposLoader: loader.loadPublisher)
-        addTeardownBlock { [weak loader] in
-            XCTAssertNil(loader, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
-        }
-        addTeardownBlock { [weak sut] in
-            XCTAssertNil(sut, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
-        }
+        trackForMemoryLeaks(loader)
+        trackForMemoryLeaks(sut)
         return (sut, loader)
     }
 

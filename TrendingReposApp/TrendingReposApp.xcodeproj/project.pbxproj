@@ -17,6 +17,7 @@
 		DB08A644296A0D9F00BCC491 /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; };
 		DB08A645296A0D9F00BCC491 /* TrendingReposiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */; };
+		DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposUIComposer.swift; sourceTree = "<group>"; };
+		DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		DB08A625296A066E00BCC491 /* TrendingReposAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB08A64B296A1FEA00BCC491 /* Helpers */,
 				DB08A626296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift */,
 			);
 			path = TrendingReposAppTests;
@@ -125,6 +128,14 @@
 				DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB08A64B296A1FEA00BCC491 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */,
+				DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
