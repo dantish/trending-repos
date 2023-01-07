@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RepoOwner {
+public struct RepoOwner: Hashable {
     public let id: UUID
     public let username: String
     public let avatarUrl: URL

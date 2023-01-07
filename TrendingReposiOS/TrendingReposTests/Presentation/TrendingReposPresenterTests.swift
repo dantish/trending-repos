@@ -14,5 +14,31 @@ final class TrendingReposPresenterTests: XCTestCase {
         XCTAssertFalse(TrendingReposPresenter.title.isEmpty)
     }
 
+    func test_init_doesNotSendMessagesToView() {
+        let (_, view) = makeSUT()
+
+        XCTAssertTrue(view.messages.isEmpty, "Expected no view messages")
+    }
+
+    // MARK: - Helpers
+
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposPresenter, view: ViewSpy) {
+        let view = ViewSpy()
+        let sut = TrendingReposPresenter(trendingReposView: view)
+        return (sut, view)
+    }
+
+    private class ViewSpy: TrendingReposView {
+        enum Message: Hashable {
+            case display(repos: [Repo])
+        }
+
+        private(set) var messages: [Message] = []
+
+        func display(_ viewModel: TrendingReposViewModel) {
+            messages.append(.display(repos: viewModel.repos))
+        }
+    }
+
 }
 

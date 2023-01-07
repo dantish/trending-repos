@@ -7,8 +7,12 @@
 
 import Foundation
 
+public protocol TrendingReposView {
+    func display(_ viewModel: TrendingReposViewModel)
+}
+
 public final class TrendingReposPresenter {
+    public init(trendingReposView: TrendingReposView) {}
 
     public static var title: String { "Trending" }
-
 }

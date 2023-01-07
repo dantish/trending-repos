@@ -35,6 +35,7 @@
 		DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296729698A4D00DBA07E /* RepoOwner.swift */; };
 		DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */; };
 		DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */; };
+		DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		DB55296729698A4D00DBA07E /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 		DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenterTests.swift; sourceTree = "<group>"; };
 		DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenter.swift; sourceTree = "<group>"; };
+		DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */,
+				DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				DB5529662969893900DBA07E /* Repo.swift in Sources */,
 				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
+				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

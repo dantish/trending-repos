@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Repo {
+public struct Repo: Hashable {
     public let id: UUID
     public let name: String
     public let description: String
