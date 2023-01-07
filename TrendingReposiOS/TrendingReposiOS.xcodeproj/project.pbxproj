@@ -40,6 +40,7 @@
 		DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */; };
 		DB5529812969D50200DBA07E /* TrendingRepoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529802969D50200DBA07E /* TrendingRepoPresenterTests.swift */; };
 		DB5529832969D5C900DBA07E /* TrendingRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529822969D5C900DBA07E /* TrendingRepoPresenter.swift */; };
+		DB5529852969F54000DBA07E /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529842969F54000DBA07E /* SharedTestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		DB5529802969D50200DBA07E /* TrendingRepoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoPresenterTests.swift; sourceTree = "<group>"; };
 		DB5529822969D5C900DBA07E /* TrendingRepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoPresenter.swift; sourceTree = "<group>"; };
+		DB5529842969F54000DBA07E /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */,
+				DB5529842969F54000DBA07E /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5529852969F54000DBA07E /* SharedTestHelpers.swift in Sources */,
 				DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */,
 				DB5529812969D50200DBA07E /* TrendingRepoPresenterTests.swift in Sources */,
 				DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */,

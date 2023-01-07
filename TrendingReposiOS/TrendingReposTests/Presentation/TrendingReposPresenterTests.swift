@@ -67,29 +67,6 @@ final class TrendingReposPresenterTests: XCTestCase {
         return (sut, view)
     }
 
-    private func anyNSError() -> NSError {
-        NSError(domain: "any error", code: 0)
-    }
-
-    private func anyURL() -> URL {
-        URL(string: "http://any-url.com")!
-    }
-
-    private func uniqueRepo() -> Repo {
-        Repo(
-            id: UUID(),
-            name: "any name",
-            description: "any description",
-            language: "any language",
-            starsCount: 100,
-            owner: RepoOwner(
-                id: UUID(),
-                username: "any username",
-                avatarUrl: anyURL()
-            )
-        )
-    }
-
     private class ViewSpy: TrendingReposView, TrendingReposLoadingView, TrendingReposErrorView {
         enum Message: Hashable {
             case display(repos: [Repo])
