@@ -21,7 +21,6 @@
 		DB55293229660AC700DBA07E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DB55293129660AC700DBA07E /* Lottie */; };
 		DB55293529660CA300DBA07E /* SomethingWentWrongAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */; };
 		DB55293829682B2F00DBA07E /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB55293729682B2F00DBA07E /* TestAssets.xcassets */; };
-		DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */; };
 		DB55293D296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */; };
 		DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */; };
 		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
@@ -37,6 +36,7 @@
 		DB552971296997F400DBA07E /* TrendingReposLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */; };
 		DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */; };
 		DB5529742969998400DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
+		DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +80,6 @@
 		DB3C4A092964400C00D8AA9B /* TrendingReposiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB55293429660CA300DBA07E /* SomethingWentWrongAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SomethingWentWrongAnimation.json; sourceTree = "<group>"; };
 		DB55293729682B2F00DBA07E /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
-		DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
 		DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_dark.png; sourceTree = "<group>"; };
 		DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
 		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenterTests.swift; sourceTree = "<group>"; };
 		DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenter.swift; sourceTree = "<group>"; };
 		DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
+		DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +157,6 @@
 			children = (
 				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
 				DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */,
-				DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +284,7 @@
 				DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */,
 				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
 				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
+				DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -491,7 +491,6 @@
 			files = (
 				DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
-				DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */,
 				DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */,
 				DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */,
@@ -518,6 +517,7 @@
 				DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
+				DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

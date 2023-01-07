@@ -63,7 +63,7 @@ final class TrendingReposSnapshotTests: XCTestCase {
         return controller
     }
 
-    private func trendingRepos() -> [TrendingRepoViewModel] {
+    private func trendingRepos() -> [TrendingRepoViewModel<UIImage>] {
         [
             TrendingRepoViewModel(
                 name: "retinaface",
@@ -135,7 +135,7 @@ final class TrendingReposSnapshotTests: XCTestCase {
 }
 
 private extension TrendingReposViewController {
-    func display(_ viewModels: [TrendingRepoViewModel]) {
-        display(viewModels.map(TrendingRepoCellController.init))
+    func display(_ viewModels: [TrendingRepoViewModel<UIImage>]) {
+        display(viewModels.map { TrendingRepoCellController(viewModel: $0) })
     }
 }
