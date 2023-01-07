@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB3C4A002964400B00D8AA9B"
-               BuildableName = "TrendingReposiOS.framework"
-               BlueprintName = "TrendingReposiOS"
-               ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+               BlueprintIdentifier = "DB55294E2969857C00DBA07E"
+               BuildableName = "TrendingRepos.framework"
+               BlueprintName = "TrendingRepos"
+               ReferencedContainer = "container:TrendingRepos.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,10 +33,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB3C4A082964400C00D8AA9B"
-               BuildableName = "TrendingReposiOSTests.xctest"
-               BlueprintName = "TrendingReposiOSTests"
-               ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+               BlueprintIdentifier = "DB5529552969857C00DBA07E"
+               BuildableName = "TrendingReposTests.xctest"
+               BlueprintName = "TrendingReposTests"
+               ReferencedContainer = "container:TrendingRepos.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -61,10 +61,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB3C4A002964400B00D8AA9B"
-            BuildableName = "TrendingReposiOS.framework"
-            BlueprintName = "TrendingReposiOS"
-            ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+            BlueprintIdentifier = "DB55294E2969857C00DBA07E"
+            BuildableName = "TrendingRepos.framework"
+            BlueprintName = "TrendingRepos"
+            ReferencedContainer = "container:TrendingRepos.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
