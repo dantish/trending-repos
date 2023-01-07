@@ -31,6 +31,8 @@
 		DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */; };
 		DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */; };
 		DB5529572969857C00DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
+		DB5529662969893900DBA07E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529652969893900DBA07E /* Repo.swift */; };
+		DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296729698A4D00DBA07E /* RepoOwner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCellController.swift; sourceTree = "<group>"; };
 		DB55294F2969857C00DBA07E /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5529562969857C00DBA07E /* TrendingReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5529652969893900DBA07E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		DB55296729698A4D00DBA07E /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 		DB5529502969857C00DBA07E /* TrendingRepos */ = {
 			isa = PBXGroup;
 			children = (
+				DB5529642969891E00DBA07E /* Domain */,
 			);
 			path = TrendingRepos;
 			sourceTree = "<group>";
@@ -238,6 +243,15 @@
 			children = (
 			);
 			path = TrendingReposTests;
+			sourceTree = "<group>";
+		};
+		DB5529642969891E00DBA07E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DB5529652969893900DBA07E /* Repo.swift */,
+				DB55296729698A4D00DBA07E /* RepoOwner.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +369,7 @@
 					};
 					DB55294E2969857C00DBA07E = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 					DB5529552969857C00DBA07E = {
 						CreatedOnToolsVersion = 14.1;
@@ -456,6 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5529662969893900DBA07E /* Repo.swift in Sources */,
+				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +734,7 @@
 		DB55295E2969857C00DBA07E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -739,6 +757,7 @@
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -746,6 +765,7 @@
 		DB55295F2969857C00DBA07E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -775,6 +795,7 @@
 		DB5529602969857C00DBA07E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BTPQF57VMN;
@@ -791,6 +812,7 @@
 		DB5529612969857C00DBA07E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BTPQF57VMN;
