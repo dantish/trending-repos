@@ -65,6 +65,22 @@ class TrendingRepoPresenterTests: XCTestCase {
         XCTAssertEqual(message?.ownerAvatar, transformedData)
     }
 
+    func test_didFinishLoadingAvatarImageDataWithError_displaysRepoWithoutAvatarImage() {
+        let repo = uniqueRepo()
+        let (sut, view) = makeSUT()
+
+        sut.didFinishLoadingAvatarImageData(with: anyNSError(), for: repo)
+
+        let message = view.messages.first
+        XCTAssertEqual(view.messages.count, 1)
+        XCTAssertEqual(message?.name, repo.name)
+        XCTAssertEqual(message?.description, repo.description)
+        XCTAssertEqual(message?.language, repo.language)
+        XCTAssertEqual(message?.starsCount, String(repo.starsCount))
+        XCTAssertEqual(message?.ownerName, repo.owner.username)
+        XCTAssertNil(message?.ownerAvatar)
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(
@@ -77,6 +93,10 @@ class TrendingRepoPresenterTests: XCTestCase {
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
+    }
+
+    private func anyNSError() -> NSError {
+        NSError(domain: "any error", code: 0)
     }
 
     private func anyURL() -> URL {

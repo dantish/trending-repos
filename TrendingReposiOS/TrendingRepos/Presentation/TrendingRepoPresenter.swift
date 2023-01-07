@@ -42,4 +42,14 @@ public final class TrendingRepoPresenter<View: TrendingRepoView, AvatarImage> wh
             ownerName: repo.owner.username,
             ownerAvatar: avatarImage))
     }
+
+    public func didFinishLoadingAvatarImageData(with error: Error, for repo: Repo) {
+        view.display(TrendingRepoViewModel(
+            name: repo.name,
+            description: repo.description,
+            language: repo.language,
+            starsCount: String(repo.starsCount),
+            ownerName: repo.owner.username,
+            ownerAvatar: nil))
+    }
 }
