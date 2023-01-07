@@ -28,18 +28,10 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertEqual(loader.loadReposCallCount, 1, "Expected a loading request once view is loaded")
 
-        sut.tableView.refreshControl?.allTargets.forEach { target in
-            sut.tableView.refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach {
-                (target as NSObject).perform(Selector($0))
-            }
-        }
+        sut.tableView.refreshControl?.simulatePullToRefresh()
         XCTAssertEqual(loader.loadReposCallCount, 2, "Expected another loading request once user initiates a reload")
 
-        sut.tableView.refreshControl?.allTargets.forEach { target in
-            sut.tableView.refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach {
-                (target as NSObject).perform(Selector($0))
-            }
-        }
+        sut.tableView.refreshControl?.simulatePullToRefresh()
         XCTAssertEqual(loader.loadReposCallCount, 3, "Expected yet another loading request once user initiates another reload")
     }
 
