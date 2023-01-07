@@ -62,6 +62,15 @@ final class TrendingReposPresenterTests: XCTestCase {
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposPresenter, view: ViewSpy) {
         let view = ViewSpy()
         let sut = TrendingReposPresenter(reposView: view, loadingView: view, errorView: view)
+
+        addTeardownBlock { [weak view] in
+            XCTAssertNil(view, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+        }
+
+        addTeardownBlock { [weak sut] in
+            XCTAssertNil(sut, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+        }
+
         return (sut, view)
     }
 
