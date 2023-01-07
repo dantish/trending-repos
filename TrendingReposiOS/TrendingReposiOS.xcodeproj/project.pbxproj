@@ -38,6 +38,8 @@
 		DB5529742969998400DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
 		DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */; };
 		DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */; };
+		DB5529812969D50200DBA07E /* TrendingRepoPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529802969D50200DBA07E /* TrendingRepoPresenterTests.swift */; };
+		DB5529832969D5C900DBA07E /* TrendingRepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529822969D5C900DBA07E /* TrendingRepoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
 		DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
 		DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		DB5529802969D50200DBA07E /* TrendingRepoPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoPresenterTests.swift; sourceTree = "<group>"; };
+		DB5529822969D5C900DBA07E /* TrendingRepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */,
+				DB5529802969D50200DBA07E /* TrendingRepoPresenterTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */,
 				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
 				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
+				DB5529822969D5C900DBA07E /* TrendingRepoPresenter.swift */,
 				DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */,
 			);
 			path = Presentation;
@@ -530,6 +536,7 @@
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
 				DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
+				DB5529832969D5C900DBA07E /* TrendingRepoPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */,
+				DB5529812969D50200DBA07E /* TrendingRepoPresenterTests.swift in Sources */,
 				DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
