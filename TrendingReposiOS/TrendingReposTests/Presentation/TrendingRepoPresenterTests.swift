@@ -32,11 +32,31 @@ class TrendingRepoPresenterTests: XCTestCase {
         XCTAssertNil(message?.ownerAvatar)
     }
 
+    func test_didFinishLoadingAvatarImageData_displaysRepoWithoutAvatarImageOnFailedImageTransformation() {
+        let (sut, view) = makeSUT(avatarImageTransformer: { _ in nil })
+        let repo = uniqueRepo()
+
+        sut.didFinishLoadingAvatarImageData(with: Data(), for: repo)
+
+        let message = view.messages.first
+        XCTAssertEqual(view.messages.count, 1)
+        XCTAssertEqual(message?.name, repo.name)
+        XCTAssertEqual(message?.description, repo.description)
+        XCTAssertEqual(message?.language, repo.language)
+        XCTAssertEqual(message?.starsCount, String(repo.starsCount))
+        XCTAssertEqual(message?.ownerName, repo.owner.username)
+        XCTAssertNil(message?.ownerAvatar)
+    }
+
     // MARK: - Helpers
 
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingRepoPresenter<ViewSpy, AnyImage>, view: ViewSpy) {
+    private func makeSUT(
+        avatarImageTransformer: @escaping (Data) -> AnyImage? = { _ in nil },
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> (sut: TrendingRepoPresenter<ViewSpy, AnyImage>, view: ViewSpy) {
         let view = ViewSpy()
-        let sut = TrendingRepoPresenter(view: view)
+        let sut = TrendingRepoPresenter(view: view, avatarImageTransformer: avatarImageTransformer)
         trackForMemoryLeaks(view, file: file, line: line)
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
