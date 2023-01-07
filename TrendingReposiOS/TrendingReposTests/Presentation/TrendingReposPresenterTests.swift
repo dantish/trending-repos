@@ -95,18 +95,18 @@ final class TrendingReposPresenterTests: XCTestCase {
             case display(isLoading: Bool)
         }
 
-        private(set) var messages: [Message] = []
+        private(set) var messages: Set<Message> = []
 
         func display(_ viewModel: TrendingReposViewModel) {
-            messages.append(.display(repos: viewModel.repos))
+            messages.insert(.display(repos: viewModel.repos))
         }
 
         func display(_ viewModel: TrendingReposLoadingViewModel) {
-            messages.append(.display(isLoading: viewModel.isLoading))
+            messages.insert(.display(isLoading: viewModel.isLoading))
         }
 
         func display(_ viewModel: TrendingReposErrorViewModel) {
-            messages.append(.display(errorTitle: viewModel.title, errorMessage: viewModel.message))
+            messages.insert(.display(errorTitle: viewModel.title, errorMessage: viewModel.message))
         }
     }
 
