@@ -13,5 +13,5 @@ public struct TrendingRepoViewModel<AvatarImage> {
     public let language: String?
     public let starsCount: String
     public let ownerName: String
-    public let ownerAvatar: AvatarImage
+    public let ownerAvatar: AvatarImage?
 }
