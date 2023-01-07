@@ -34,14 +34,23 @@ public final class TrendingReposViewController: UIViewController {
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var errorView: TrendingReposErrorView!
 
+    public var onRefresh: (() -> Void)?
+
     public override func viewDidLoad() {
         super.viewDidLoad()
 
         configureTableView()
+        refresh()
     }
 
     private func configureTableView() {
         tableView.dataSource = dataSource
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+
+    @objc private func refresh() {
+        onRefresh?()
     }
 
     public func display(_ items: [TrendingRepoCellController]) {

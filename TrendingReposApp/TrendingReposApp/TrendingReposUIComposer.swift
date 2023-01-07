@@ -6,17 +6,27 @@
 //
 
 import UIKit
+import Combine
 import TrendingRepos
 import TrendingReposiOS
 
 public final class TrendingReposUIComposer {
     private init() {}
 
-    public static func trendingRepos() -> TrendingReposViewController {
+    public static func trendingReposComposedWith(
+        reposLoader: @escaping () -> AnyPublisher<[Repo], Error>
+    ) -> TrendingReposViewController {
+        let trendingReposController = makeTrendingReposViewController()
+        trendingReposController.title = TrendingReposPresenter.title
+        trendingReposController.onRefresh = {
+            _ = reposLoader()
+        }
+        return trendingReposController
+    }
+
+    private static func makeTrendingReposViewController() -> TrendingReposViewController {
         let bundle = Bundle(for: TrendingReposViewController.self)
         let storyboard = UIStoryboard(name: "TrendingRepos", bundle: bundle)
-        let trendingReposController = storyboard.instantiateInitialViewController() as! TrendingReposViewController
-        trendingReposController.title = TrendingReposPresenter.title
-        return trendingReposController
+        return storyboard.instantiateInitialViewController() as! TrendingReposViewController
     }
 }
