@@ -20,23 +20,44 @@ final class TrendingReposPresenterTests: XCTestCase {
         XCTAssertTrue(view.messages.isEmpty, "Expected no view messages")
     }
 
+    func test_didStartLoadingRepos_displaysNoErrorMessageAndStartsLoading() {
+        let (sut, view) = makeSUT()
+
+        sut.didStartLoadingRepos()
+
+        XCTAssertEqual(view.messages, [
+            .display(errorTitle: .none, errorMessage: .none),
+            .display(isLoading: true)
+        ])
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposPresenter, view: ViewSpy) {
         let view = ViewSpy()
-        let sut = TrendingReposPresenter(trendingReposView: view)
+        let sut = TrendingReposPresenter(reposView: view, loadingView: view, errorView: view)
         return (sut, view)
     }
 
-    private class ViewSpy: TrendingReposView {
+    private class ViewSpy: TrendingReposView, TrendingReposLoadingView, TrendingReposErrorView {
         enum Message: Hashable {
             case display(repos: [Repo])
+            case display(errorTitle: String?, errorMessage: String?)
+            case display(isLoading: Bool)
         }
 
         private(set) var messages: [Message] = []
 
         func display(_ viewModel: TrendingReposViewModel) {
             messages.append(.display(repos: viewModel.repos))
+        }
+
+        func display(_ viewModel: TrendingReposLoadingViewModel) {
+            messages.append(.display(isLoading: viewModel.isLoading))
+        }
+
+        func display(_ viewModel: TrendingReposErrorViewModel) {
+            messages.append(.display(errorTitle: viewModel.title, errorMessage: viewModel.message))
         }
     }
 

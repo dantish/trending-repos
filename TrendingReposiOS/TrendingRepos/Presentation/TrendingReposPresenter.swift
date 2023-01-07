@@ -11,8 +11,29 @@ public protocol TrendingReposView {
     func display(_ viewModel: TrendingReposViewModel)
 }
 
+public protocol TrendingReposLoadingView {
+    func display(_ viewModel: TrendingReposLoadingViewModel)
+}
+
+public protocol TrendingReposErrorView {
+    func display(_ viewModel: TrendingReposErrorViewModel)
+}
+
 public final class TrendingReposPresenter {
-    public init(trendingReposView: TrendingReposView) {}
+    private let reposView: TrendingReposView
+    private let loadingView: TrendingReposLoadingView
+    private let errorView: TrendingReposErrorView
+
+    public init(reposView: TrendingReposView, loadingView: TrendingReposLoadingView, errorView: TrendingReposErrorView) {
+        self.reposView = reposView
+        self.loadingView = loadingView
+        self.errorView = errorView
+    }
 
     public static var title: String { "Trending" }
+
+    public func didStartLoadingRepos() {
+        errorView.display(.noError)
+        loadingView.display(TrendingReposLoadingViewModel(isLoading: true))
+    }
 }
