@@ -19,6 +19,7 @@
 		DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */; };
 		DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */; };
 		DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */; };
+		DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposUIComposer.swift; sourceTree = "<group>"; };
 		DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */,
+				DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */,
 				DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */,
 			);
 			path = Helpers;
@@ -255,6 +258,7 @@
 				DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */,
 				DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
