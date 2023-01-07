@@ -8,7 +8,7 @@
 import XCTest
 import Combine
 import TrendingRepos
-@testable import TrendingReposiOS
+import TrendingReposiOS
 import TrendingReposApp
 
 final class TrendingReposUIIntegrationTests: XCTestCase {
@@ -28,10 +28,10 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertEqual(loader.loadReposCallCount, 1, "Expected a loading request once view is loaded")
 
-        sut.tableView.refreshControl?.simulatePullToRefresh()
+        sut.simulateUserInitiatedReposReload()
         XCTAssertEqual(loader.loadReposCallCount, 2, "Expected another loading request once user initiates a reload")
 
-        sut.tableView.refreshControl?.simulatePullToRefresh()
+        sut.simulateUserInitiatedReposReload()
         XCTAssertEqual(loader.loadReposCallCount, 3, "Expected yet another loading request once user initiates another reload")
     }
 
