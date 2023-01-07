@@ -9,24 +9,13 @@
 /* Begin PBXBuildFile section */
 		DB08A610296A066C00BCC491 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A60F296A066C00BCC491 /* AppDelegate.swift */; };
 		DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A611296A066C00BCC491 /* SceneDelegate.swift */; };
-		DB08A614296A066C00BCC491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A613296A066C00BCC491 /* ViewController.swift */; };
-		DB08A617296A066C00BCC491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08A615296A066C00BCC491 /* Main.storyboard */; };
 		DB08A619296A066D00BCC491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB08A618296A066D00BCC491 /* Assets.xcassets */; };
 		DB08A61C296A066D00BCC491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */; };
 		DB08A627296A066E00BCC491 /* TrendingReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */; };
-		DB08A631296A066E00BCC491 /* TrendingReposAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A630296A066E00BCC491 /* TrendingReposAppUITests.swift */; };
-		DB08A633296A066E00BCC491 /* TrendingReposAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A632296A066E00BCC491 /* TrendingReposAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DB08A623296A066E00BCC491 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DB08A604296A066C00BCC491 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DB08A60B296A066C00BCC491;
-			remoteInfo = TrendingReposApp;
-		};
-		DB08A62D296A066E00BCC491 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB08A604296A066C00BCC491 /* Project object */;
 			proxyType = 1;
@@ -39,16 +28,11 @@
 		DB08A60C296A066C00BCC491 /* TrendingReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A60F296A066C00BCC491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB08A611296A066C00BCC491 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB08A613296A066C00BCC491 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB08A616296A066C00BCC491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB08A618296A066D00BCC491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB08A61B296A066D00BCC491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB08A61D296A066D00BCC491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB08A622296A066E00BCC491 /* TrendingReposAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposAppTests.swift; sourceTree = "<group>"; };
-		DB08A62C296A066E00BCC491 /* TrendingReposAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB08A630296A066E00BCC491 /* TrendingReposAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposAppUITests.swift; sourceTree = "<group>"; };
-		DB08A632296A066E00BCC491 /* TrendingReposAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +50,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB08A629296A066E00BCC491 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +58,6 @@
 			children = (
 				DB08A60E296A066C00BCC491 /* TrendingReposApp */,
 				DB08A625296A066E00BCC491 /* TrendingReposAppTests */,
-				DB08A62F296A066E00BCC491 /* TrendingReposAppUITests */,
 				DB08A60D296A066C00BCC491 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +67,6 @@
 			children = (
 				DB08A60C296A066C00BCC491 /* TrendingReposApp.app */,
 				DB08A622296A066E00BCC491 /* TrendingReposAppTests.xctest */,
-				DB08A62C296A066E00BCC491 /* TrendingReposAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,8 +76,6 @@
 			children = (
 				DB08A60F296A066C00BCC491 /* AppDelegate.swift */,
 				DB08A611296A066C00BCC491 /* SceneDelegate.swift */,
-				DB08A613296A066C00BCC491 /* ViewController.swift */,
-				DB08A615296A066C00BCC491 /* Main.storyboard */,
 				DB08A618296A066D00BCC491 /* Assets.xcassets */,
 				DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */,
 				DB08A61D296A066D00BCC491 /* Info.plist */,
@@ -116,15 +89,6 @@
 				DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */,
 			);
 			path = TrendingReposAppTests;
-			sourceTree = "<group>";
-		};
-		DB08A62F296A066E00BCC491 /* TrendingReposAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DB08A630296A066E00BCC491 /* TrendingReposAppUITests.swift */,
-				DB08A632296A066E00BCC491 /* TrendingReposAppUITestsLaunchTests.swift */,
-			);
-			path = TrendingReposAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +129,6 @@
 			productReference = DB08A622296A066E00BCC491 /* TrendingReposAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DB08A62B296A066E00BCC491 /* TrendingReposAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DB08A63C296A066E00BCC491 /* Build configuration list for PBXNativeTarget "TrendingReposAppUITests" */;
-			buildPhases = (
-				DB08A628296A066E00BCC491 /* Sources */,
-				DB08A629296A066E00BCC491 /* Frameworks */,
-				DB08A62A296A066E00BCC491 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DB08A62E296A066E00BCC491 /* PBXTargetDependency */,
-			);
-			name = TrendingReposAppUITests;
-			productName = TrendingReposAppUITests;
-			productReference = DB08A62C296A066E00BCC491 /* TrendingReposAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +143,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					DB08A621296A066E00BCC491 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = DB08A60B296A066C00BCC491;
-					};
-					DB08A62B296A066E00BCC491 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = DB08A60B296A066C00BCC491;
 					};
@@ -221,7 +163,6 @@
 			targets = (
 				DB08A60B296A066C00BCC491 /* TrendingReposApp */,
 				DB08A621296A066E00BCC491 /* TrendingReposAppTests */,
-				DB08A62B296A066E00BCC491 /* TrendingReposAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +174,10 @@
 			files = (
 				DB08A61C296A066D00BCC491 /* LaunchScreen.storyboard in Resources */,
 				DB08A619296A066D00BCC491 /* Assets.xcassets in Resources */,
-				DB08A617296A066C00BCC491 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DB08A620296A066E00BCC491 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB08A62A296A066E00BCC491 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +191,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB08A614296A066C00BCC491 /* ViewController.swift in Sources */,
 				DB08A610296A066C00BCC491 /* AppDelegate.swift in Sources */,
 				DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */,
 			);
@@ -272,15 +204,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB08A628296A066E00BCC491 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB08A631296A066E00BCC491 /* TrendingReposAppUITests.swift in Sources */,
-				DB08A633296A066E00BCC491 /* TrendingReposAppUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +212,9 @@
 			target = DB08A60B296A066C00BCC491 /* TrendingReposApp */;
 			targetProxy = DB08A623296A066E00BCC491 /* PBXContainerItemProxy */;
 		};
-		DB08A62E296A066E00BCC491 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DB08A60B296A066C00BCC491 /* TrendingReposApp */;
-			targetProxy = DB08A62D296A066E00BCC491 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB08A615296A066C00BCC491 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB08A616296A066C00BCC491 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +352,6 @@
 				INFOPLIST_FILE = TrendingReposApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +379,6 @@
 				INFOPLIST_FILE = TrendingReposApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,42 +434,6 @@
 			};
 			name = Release;
 		};
-		DB08A63D296A066E00BCC491 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BTPQF57VMN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dantish.TrendingReposAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrendingReposApp;
-			};
-			name = Debug;
-		};
-		DB08A63E296A066E00BCC491 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BTPQF57VMN;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dantish.TrendingReposAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrendingReposApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +460,6 @@
 			buildConfigurations = (
 				DB08A63A296A066E00BCC491 /* Debug */,
 				DB08A63B296A066E00BCC491 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB08A63C296A066E00BCC491 /* Build configuration list for PBXNativeTarget "TrendingReposAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DB08A63D296A066E00BCC491 /* Debug */,
-				DB08A63E296A066E00BCC491 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
