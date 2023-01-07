@@ -12,6 +12,10 @@
 		DB08A619296A066D00BCC491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB08A618296A066D00BCC491 /* Assets.xcassets */; };
 		DB08A61C296A066D00BCC491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */; };
 		DB08A627296A066E00BCC491 /* TrendingReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */; };
+		DB08A642296A0D9F00BCC491 /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */; };
+		DB08A643296A0D9F00BCC491 /* TrendingRepos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB08A644296A0D9F00BCC491 /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; };
+		DB08A645296A0D9F00BCC491 /* TrendingReposiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +28,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DB08A646296A0D9F00BCC491 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DB08A643296A0D9F00BCC491 /* TrendingRepos.framework in Embed Frameworks */,
+				DB08A645296A0D9F00BCC491 /* TrendingReposiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DB08A60C296A066C00BCC491 /* TrendingReposApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingReposApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A60F296A066C00BCC491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +52,8 @@
 		DB08A61D296A066D00BCC491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB08A622296A066E00BCC491 /* TrendingReposAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposAppTests.swift; sourceTree = "<group>"; };
+		DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB08A642296A0D9F00BCC491 /* TrendingRepos.framework in Frameworks */,
+				DB08A644296A0D9F00BCC491 /* TrendingReposiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 				DB08A60E296A066C00BCC491 /* TrendingReposApp */,
 				DB08A625296A066E00BCC491 /* TrendingReposAppTests */,
 				DB08A60D296A066C00BCC491 /* Products */,
+				DB08A63F296A0D9F00BCC491 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +115,15 @@
 			path = TrendingReposAppTests;
 			sourceTree = "<group>";
 		};
+		DB08A63F296A0D9F00BCC491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */,
+				DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +134,7 @@
 				DB08A608296A066C00BCC491 /* Sources */,
 				DB08A609296A066C00BCC491 /* Frameworks */,
 				DB08A60A296A066C00BCC491 /* Resources */,
+				DB08A646296A0D9F00BCC491 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
