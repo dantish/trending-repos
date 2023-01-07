@@ -46,7 +46,7 @@ final class TrendingReposPresenterTests: XCTestCase {
     func test_didFinishLoadingReposWithError_displaysErrorMessageAndStopsLoading() {
         let (sut, view) = makeSUT()
 
-        sut.didFinishLoadingRepos(with: NSError(domain: "any error", code: 0))
+        sut.didFinishLoadingRepos(with: anyNSError())
 
         XCTAssertEqual(view.messages, [
             .display(
@@ -65,6 +65,14 @@ final class TrendingReposPresenterTests: XCTestCase {
         return (sut, view)
     }
 
+    private func anyNSError() -> NSError {
+        NSError(domain: "any error", code: 0)
+    }
+
+    private func anyURL() -> URL {
+        URL(string: "http://any-url.com")!
+    }
+
     private func uniqueRepo() -> Repo {
         Repo(
             id: UUID(),
@@ -75,7 +83,7 @@ final class TrendingReposPresenterTests: XCTestCase {
             owner: RepoOwner(
                 id: UUID(),
                 username: "any username",
-                avatarUrl: URL(string: "http://any-url.com")!
+                avatarUrl: anyURL()
             )
         )
     }
