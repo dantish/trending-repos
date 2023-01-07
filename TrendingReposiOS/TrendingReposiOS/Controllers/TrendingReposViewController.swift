@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import TrendingRepos
 
 public final class TrendingReposViewController: UIViewController {
 
