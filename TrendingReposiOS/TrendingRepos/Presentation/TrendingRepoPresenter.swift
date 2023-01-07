@@ -33,12 +33,13 @@ public final class TrendingRepoPresenter<View: TrendingRepoView, AvatarImage> wh
     }
 
     public func didFinishLoadingAvatarImageData(with data: Data, for repo: Repo) {
+        let avatarImage = avatarImageTransformer(data)
         view.display(TrendingRepoViewModel(
             name: repo.name,
             description: repo.description,
             language: repo.language,
             starsCount: String(repo.starsCount),
             ownerName: repo.owner.username,
-            ownerAvatar: nil))
+            ownerAvatar: avatarImage))
     }
 }

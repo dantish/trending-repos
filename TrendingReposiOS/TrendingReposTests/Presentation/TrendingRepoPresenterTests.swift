@@ -48,6 +48,23 @@ class TrendingRepoPresenterTests: XCTestCase {
         XCTAssertNil(message?.ownerAvatar)
     }
 
+    func test_didFinishLoadingAvatarImageData_displaysRepoWithAvatarImageOnSuccessfulImageTransformation() {
+        let repo = uniqueRepo()
+        let transformedData = AnyImage()
+        let (sut, view) = makeSUT(avatarImageTransformer: { _ in transformedData })
+
+        sut.didFinishLoadingAvatarImageData(with: Data(), for: repo)
+
+        let message = view.messages.first
+        XCTAssertEqual(view.messages.count, 1)
+        XCTAssertEqual(message?.name, repo.name)
+        XCTAssertEqual(message?.description, repo.description)
+        XCTAssertEqual(message?.language, repo.language)
+        XCTAssertEqual(message?.starsCount, String(repo.starsCount))
+        XCTAssertEqual(message?.ownerName, repo.owner.username)
+        XCTAssertEqual(message?.ownerAvatar, transformedData)
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(
@@ -81,7 +98,7 @@ class TrendingRepoPresenterTests: XCTestCase {
         )
     }
 
-    private struct AnyImage {}
+    private struct AnyImage: Equatable {}
 
     private class ViewSpy: TrendingRepoView {
         private(set) var messages: [TrendingRepoViewModel<AnyImage>] = []
