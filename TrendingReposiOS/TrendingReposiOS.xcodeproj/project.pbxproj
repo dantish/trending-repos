@@ -37,6 +37,7 @@
 		DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */; };
 		DB5529742969998400DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
 		DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */; };
+		DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenter.swift; sourceTree = "<group>"; };
 		DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
 		DB5529792969A6EC00DBA07E /* TrendingRepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewModel.swift; sourceTree = "<group>"; };
+		DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 		DB55295A2969857C00DBA07E /* TrendingReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB55297D2969D41600DBA07E /* Helpers */,
 				DB55296B2969901100DBA07E /* Presentation */,
 			);
 			path = TrendingReposTests;
@@ -294,6 +297,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB55297D2969D41600DBA07E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB55297E2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -527,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */,
+				DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
