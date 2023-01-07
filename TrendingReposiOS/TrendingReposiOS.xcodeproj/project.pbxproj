@@ -33,6 +33,8 @@
 		DB5529572969857C00DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
 		DB5529662969893900DBA07E /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529652969893900DBA07E /* Repo.swift */; };
 		DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296729698A4D00DBA07E /* RepoOwner.swift */; };
+		DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */; };
+		DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		DB5529562969857C00DBA07E /* TrendingReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5529652969893900DBA07E /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		DB55296729698A4D00DBA07E /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
+		DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenterTests.swift; sourceTree = "<group>"; };
+		DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				DB5529642969891E00DBA07E /* Domain */,
+				DB55296C2969904300DBA07E /* Presentation */,
 			);
 			path = TrendingRepos;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 		DB55295A2969857C00DBA07E /* TrendingReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB55296B2969901100DBA07E /* Presentation */,
 			);
 			path = TrendingReposTests;
 			sourceTree = "<group>";
@@ -252,6 +258,22 @@
 				DB55296729698A4D00DBA07E /* RepoOwner.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		DB55296B2969901100DBA07E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB55296C2969904300DBA07E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +395,7 @@
 					};
 					DB5529552969857C00DBA07E = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -472,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5529662969893900DBA07E /* Repo.swift in Sources */,
+				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,15 +821,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BTPQF57VMN;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantish.TrendingReposTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -813,10 +845,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BTPQF57VMN;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dantish.TrendingReposTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
