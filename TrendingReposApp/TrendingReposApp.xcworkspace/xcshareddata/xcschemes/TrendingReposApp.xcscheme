@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB3C4A002964400B00D8AA9B"
-               BuildableName = "TrendingReposiOS.framework"
-               BlueprintName = "TrendingReposiOS"
-               ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+               BlueprintIdentifier = "DB08A60B296A066C00BCC491"
+               BuildableName = "TrendingReposApp.app"
+               BlueprintName = "TrendingReposApp"
+               ReferencedContainer = "container:TrendingReposApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,10 +33,10 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB3C4A082964400C00D8AA9B"
-               BuildableName = "TrendingReposiOSTests.xctest"
-               BlueprintName = "TrendingReposiOSTests"
-               ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+               BlueprintIdentifier = "DB08A621296A066E00BCC491"
+               BuildableName = "TrendingReposAppTests.xctest"
+               BlueprintName = "TrendingReposAppTests"
+               ReferencedContainer = "container:TrendingReposApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -51,6 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "DB08A60B296A066C00BCC491"
+            BuildableName = "TrendingReposApp.app"
+            BlueprintName = "TrendingReposApp"
+            ReferencedContainer = "container:TrendingReposApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -58,15 +68,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB3C4A002964400B00D8AA9B"
-            BuildableName = "TrendingReposiOS.framework"
-            BlueprintName = "TrendingReposiOS"
-            ReferencedContainer = "container:TrendingReposiOS.xcodeproj">
+            BlueprintIdentifier = "DB08A60B296A066C00BCC491"
+            BuildableName = "TrendingReposApp.app"
+            BlueprintName = "TrendingReposApp"
+            ReferencedContainer = "container:TrendingReposApp.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
