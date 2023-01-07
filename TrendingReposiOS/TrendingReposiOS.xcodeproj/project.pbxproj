@@ -12,11 +12,9 @@
 		DB039486296449200018786C /* TrendingReposSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB039485296449200018786C /* TrendingReposSnapshotTests.swift */; };
 		DB03948829644DAF0018786C /* TrendingRepos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB03948729644DAF0018786C /* TrendingRepos.storyboard */; };
 		DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948B29644E020018786C /* TrendingReposViewController.swift */; };
-		DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */; };
 		DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */; };
 		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
 		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
-		DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */; };
 		DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */; };
 		DB123B702965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6E2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_dark.png */; };
 		DB3C4A0A2964400C00D8AA9B /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C4A012964400B00D8AA9B /* TrendingReposiOS.framework */; };
@@ -36,6 +34,9 @@
 		DB55296A2969900C00DBA07E /* TrendingReposPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529692969900C00DBA07E /* TrendingReposPresenterTests.swift */; };
 		DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */; };
 		DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */; };
+		DB552971296997F400DBA07E /* TrendingReposLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */; };
+		DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */; };
+		DB5529742969998400DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,13 @@
 			remoteInfo = TrendingReposiOS;
 		};
 		DB5529582969857C00DBA07E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB3C49F82964400B00D8AA9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB55294E2969857C00DBA07E;
+			remoteInfo = TrendingRepos;
+		};
+		DB5529762969998500DBA07E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB3C49F82964400B00D8AA9B /* Project object */;
 			proxyType = 1;
@@ -94,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB55293229660AC700DBA07E /* Lottie in Frameworks */,
+				DB5529742969998400DBA07E /* TrendingRepos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +157,6 @@
 			children = (
 				DB03948B29644E020018786C /* TrendingReposViewController.swift */,
 				DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */,
-				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
-				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
 				DB55293929682FA200DBA07E /* TrendingRepoViewModel.swift */,
 			);
 			path = Controllers;
@@ -176,6 +183,7 @@
 				DB3C4A032964400B00D8AA9B /* TrendingReposiOS */,
 				DB3C4A0D2964400C00D8AA9B /* TrendingReposiOSTests */,
 				DB3C4A022964400B00D8AA9B /* Products */,
+				DB5529732969998400DBA07E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,8 +283,17 @@
 			children = (
 				DB55296D2969905800DBA07E /* TrendingReposPresenter.swift */,
 				DB55296F296994FA00DBA07E /* TrendingReposViewModel.swift */,
+				DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */,
+				DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB5529732969998400DBA07E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +328,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DB5529772969998500DBA07E /* PBXTargetDependency */,
 			);
 			name = TrendingReposiOS;
 			packageProductDependencies = (
@@ -472,9 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */,
-				DB03948E29644E380018786C /* TrendingReposLoadingViewModel.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
-				DB123B6C2965ED950023FF02 /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55293A29682FA200DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */,
 				DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */,
@@ -498,6 +514,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB5529662969893900DBA07E /* Repo.swift in Sources */,
+				DB552971296997F400DBA07E /* TrendingReposLoadingViewModel.swift in Sources */,
+				DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
 				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
@@ -524,6 +542,11 @@
 			isa = PBXTargetDependency;
 			target = DB55294E2969857C00DBA07E /* TrendingRepos */;
 			targetProxy = DB5529582969857C00DBA07E /* PBXContainerItemProxy */;
+		};
+		DB5529772969998500DBA07E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB55294E2969857C00DBA07E /* TrendingRepos */;
+			targetProxy = DB5529762969998500DBA07E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

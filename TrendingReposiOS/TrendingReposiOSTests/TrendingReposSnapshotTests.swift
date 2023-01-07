@@ -7,6 +7,7 @@
 
 import XCTest
 import Lottie
+@testable import TrendingRepos
 @testable import TrendingReposiOS
 
 final class TrendingReposSnapshotTests: XCTestCase {
