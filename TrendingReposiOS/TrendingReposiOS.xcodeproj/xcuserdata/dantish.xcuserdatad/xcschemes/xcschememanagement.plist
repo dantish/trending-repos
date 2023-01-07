@@ -4,10 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TrendingReposiOS.xcscheme_^#shared#^_</key>
+		<key>TrendingRepos.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TrendingReposiOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DB3C4A002964400B00D8AA9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB3C4A082964400C00D8AA9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
