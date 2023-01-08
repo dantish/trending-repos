@@ -35,6 +35,28 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadReposCallCount, 3, "Expected yet another loading request once user initiates another reload")
     }
 
+    func test_userInitiatedLoadingIndicator_isVisibleWhileDoingReposReloadInitiatedByUser() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        XCTAssertFalse(sut.isShowingUserInitiatedLoadingIndicator, "Expected no user initiated loading indicator once view is loaded")
+
+        loader.completeReposLoading(at: 0)
+        XCTAssertFalse(sut.isShowingUserInitiatedLoadingIndicator, "Expected no user initiated loading indicator once initial loading completes successfully")
+
+        sut.simulateUserInitiatedReposReload()
+        XCTAssertTrue(sut.isShowingUserInitiatedLoadingIndicator, "Expected user initiated loading indicator once user initiates a reload")
+
+        loader.completeReposLoading(at: 1)
+        XCTAssertFalse(sut.isShowingUserInitiatedLoadingIndicator, "Expected no user initiated loading indicator once user initiated loading completes successfully")
+
+        sut.simulateUserInitiatedReposReload()
+        XCTAssertTrue(sut.isShowingUserInitiatedLoadingIndicator, "Expected user initiated loading indicator once user initiates another reload")
+
+        loader.completeReposLoadingWithError(at: 2)
+        XCTAssertFalse(sut.isShowingUserInitiatedLoadingIndicator, "Expected no user initiated loading indicator once user initiated loading completes with error")
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
@@ -56,6 +78,15 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
             let publisher = PassthroughSubject<[Repo], Error>()
             reposRequests.append(publisher)
             return publisher.eraseToAnyPublisher()
+        }
+
+        func completeReposLoading(with repos: [Repo] = [], at index: Int = 0) {
+            reposRequests[index].send(repos)
+        }
+
+        func completeReposLoadingWithError(at index: Int = 0) {
+            let error = NSError(domain: "an error", code: 0)
+            reposRequests[index].send(completion: .failure(error))
         }
     }
 

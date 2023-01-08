@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 import TrendingRepos
 
-public final class TrendingReposViewController: UIViewController {
+public final class TrendingReposViewController: UIViewController, TrendingReposLoadingView, TrendingReposErrorView {
 
     private typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
     private typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
@@ -64,6 +64,16 @@ public final class TrendingReposViewController: UIViewController {
     private var numberOfLoadingCells: Int { 20 }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
+        guard viewModel.isLoading else {
+            tableView.refreshControl?.endRefreshing()
+            return
+        }
+
+        guard dataSource.snapshot().numberOfItems == 0 else {
+            tableView.refreshControl?.beginRefreshing()
+            return
+        }
+
         var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])
         snapshot.appendItems((0..<numberOfLoadingCells).map(DataSourceItem.loading), toSection: 0)

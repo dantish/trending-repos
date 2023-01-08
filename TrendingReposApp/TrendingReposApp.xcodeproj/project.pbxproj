@@ -17,10 +17,12 @@
 		DB08A644296A0D9F00BCC491 /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; };
 		DB08A645296A0D9F00BCC491 /* TrendingReposiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */; };
+		DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */; };
 		DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */; };
 		DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */; };
 		DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */; };
 		DB08A653296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */; };
+		DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +62,12 @@
 		DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposUIComposer.swift; sourceTree = "<group>"; };
+		DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 		DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				DB08A60F296A066C00BCC491 /* AppDelegate.swift */,
 				DB08A611296A066C00BCC491 /* SceneDelegate.swift */,
 				DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */,
+				DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */,
+				DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */,
 				DB08A618296A066D00BCC491 /* Assets.xcassets */,
 				DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */,
 				DB08A61D296A066D00BCC491 /* Info.plist */,
@@ -251,6 +257,8 @@
 				DB08A610296A066C00BCC491 /* AppDelegate.swift in Sources */,
 				DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */,
 				DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */,
+				DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */,
+				DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

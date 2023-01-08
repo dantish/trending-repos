@@ -11,4 +11,8 @@ extension TrendingReposViewController {
     func simulateUserInitiatedReposReload() {
         tableView.refreshControl?.simulatePullToRefresh()
     }
+
+    var isShowingUserInitiatedLoadingIndicator: Bool {
+        tableView.refreshControl?.isRefreshing ?? false
+    }
 }
