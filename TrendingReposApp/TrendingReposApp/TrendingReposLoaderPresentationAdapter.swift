@@ -7,7 +7,6 @@
 
 import Combine
 import TrendingRepos
-import TrendingReposiOS
 
 final class TrendingReposLoaderPresentationAdapter {
     private let reposLoader: () -> AnyPublisher<[Repo], Error>
@@ -22,6 +21,7 @@ final class TrendingReposLoaderPresentationAdapter {
         presenter?.didStartLoadingRepos()
         
         cancellable = reposLoader()
+            .dispatchOnMainQueue()
             .sink(
                 receiveCompletion: { [weak self] completion in
                     switch completion {
