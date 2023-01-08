@@ -25,6 +25,7 @@
 		DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */; };
 		DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */; };
 		DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */; };
+		DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewAdapter.swift; sourceTree = "<group>"; };
 		DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingRepoCell+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposUIIntegrationTests+Assertions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */,
 				DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */,
 				DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */,
+				DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */,
 				DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */,
+				DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */,
 				DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */,
