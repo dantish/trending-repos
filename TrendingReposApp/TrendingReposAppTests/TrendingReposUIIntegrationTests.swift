@@ -115,6 +115,19 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [])
     }
 
+    func test_loadReposCompletion_doesNotAlterCurrentRenderingStateOnError() {
+        let repo0 = makeRepo()
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeReposLoading(with: [repo0], at: 0)
+        assertThat(sut, isRendering: [repo0])
+
+        sut.simulateUserInitiatedReposReload()
+        loader.completeReposLoadingWithError(at: 1)
+        assertThat(sut, isRendering: [repo0])
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
