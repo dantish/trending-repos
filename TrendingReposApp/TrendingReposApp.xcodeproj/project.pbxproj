@@ -23,6 +23,7 @@
 		DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */; };
 		DB08A653296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */; };
 		DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */; };
+		DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewAdapter.swift; sourceTree = "<group>"; };
+		DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */,
 				DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */,
 				DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */,
+				DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */,
 				DB08A618296A066D00BCC491 /* Assets.xcassets */,
 				DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */,
 				DB08A61D296A066D00BCC491 /* Info.plist */,
@@ -258,6 +261,7 @@
 				DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */,
 				DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */,
 				DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */,
+				DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */,
 				DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
