@@ -12,6 +12,10 @@ extension TrendingReposViewController {
         tableView.refreshControl?.simulatePullToRefresh()
     }
 
+    var isShowingLoadingIndicator: Bool {
+        tableView.visibleCells.allSatisfy { $0.reuseIdentifier == "TrendingRepoLoadingCell" }
+    }
+
     var isShowingUserInitiatedLoadingIndicator: Bool {
         tableView.refreshControl?.isRefreshing ?? false
     }

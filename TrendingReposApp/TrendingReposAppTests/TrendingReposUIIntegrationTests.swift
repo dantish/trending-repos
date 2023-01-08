@@ -35,6 +35,28 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadReposCallCount, 3, "Expected yet another loading request once user initiates another reload")
     }
 
+    func test_loadingIndicator_isVisibleWhileDoingReposReloadNotInitiatedByUser() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
+
+        loader.completeReposLoading(at: 0)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once initial loading completes successfully")
+
+        sut.simulateUserInitiatedReposReload()
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiates a reload")
+
+        loader.completeReposLoading(at: 1)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes successfully")
+
+        sut.simulateUserInitiatedReposReload()
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiates another reload")
+
+        loader.completeReposLoadingWithError(at: 2)
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
+    }
+
     func test_userInitiatedLoadingIndicator_isVisibleWhileDoingReposReloadInitiatedByUser() {
         let (sut, loader) = makeSUT()
 
