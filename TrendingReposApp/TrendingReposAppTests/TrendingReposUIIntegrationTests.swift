@@ -79,6 +79,28 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertFalse(sut.isShowingUserInitiatedLoadingIndicator, "Expected no user initiated loading indicator once user initiated loading completes with error")
     }
 
+    func test_loadReposCompletion_rendersSuccessfullyLoadedRepos() {
+        let repo0 = makeRepo(
+            name: "name 0",
+            ownerUsername: "username 0"
+        )
+        let repo1 = makeRepo(
+            name: "name 1",
+            ownerUsername: "username 1"
+        )
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        assertThat(sut, isRendering: [])
+
+        loader.completeReposLoading(with: [repo0], at: 0)
+        assertThat(sut, isRendering: [repo0])
+
+        sut.simulateUserInitiatedReposReload()
+        loader.completeReposLoading(with: [repo0, repo1], at: 1)
+        assertThat(sut, isRendering: [repo0, repo1])
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
@@ -87,6 +109,50 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         trackForMemoryLeaks(loader)
         trackForMemoryLeaks(sut)
         return (sut, loader)
+    }
+
+    func assertThat(_ sut: TrendingReposViewController, isRendering repos: [Repo], file: StaticString = #file, line: UInt = #line) {
+        guard sut.numberOfRenderedRepoViews() == repos.count else {
+            return XCTFail("Expected \(repos.count) images, got \(sut.numberOfRenderedRepoViews()) instead.", file: file, line: line)
+        }
+
+        repos.enumerated().forEach { index, repo in
+            assertThat(sut, hasViewConfiguredFor: repo, at: index, file: file, line: line)
+        }
+    }
+
+    func assertThat(_ sut: TrendingReposViewController, hasViewConfiguredFor repo: Repo, at index: Int, file: StaticString = #file, line: UInt = #line) {
+        let view = sut.repoView(at: index)
+
+        guard let cell = view as? TrendingRepoCell else {
+            return XCTFail("Expected \(TrendingRepoCell.self) instance, got \(String(describing: view)) instead", file: file, line: line)
+        }
+
+        XCTAssertEqual(cell.nameText, repo.name, "Expected name text to be \(String(describing: repo.name)) for repo view at index (\(index))", file: file, line: line)
+
+        XCTAssertEqual(cell.ownerUsernameText, repo.owner.username, "Expected owner username text to be \(String(describing: repo.owner.username)) for repo view at index (\(index)", file: file, line: line)
+    }
+
+    private func makeRepo(
+        name: String = "any name",
+        description: String? = nil,
+        language: String? = nil,
+        starsCount: Int = 100,
+        ownerUsername: String = "any username",
+        ownerAvatarUrl: URL = URL(string: "http://any-url.com")!
+    ) -> Repo {
+        Repo(
+            id: UUID(),
+            name: name,
+            description: description,
+            language: language,
+            starsCount: starsCount,
+            owner: RepoOwner(
+                id: UUID(),
+                username: ownerUsername,
+                avatarUrl: ownerAvatarUrl
+            )
+        )
     }
 
     private class LoaderSpy {

@@ -5,6 +5,7 @@
 //  Created by Daniel Tischenko on 08.01.2023.
 //
 
+import UIKit
 import TrendingRepos
 
 final class WeakRefVirtualProxy<T: AnyObject> {
@@ -24,5 +25,11 @@ extension WeakRefVirtualProxy: TrendingReposErrorView where T: TrendingReposErro
 extension WeakRefVirtualProxy: TrendingReposLoadingView where T: TrendingReposLoadingView {
     func display(_ viewModel: TrendingReposLoadingViewModel) {
         object?.display(viewModel)
+    }
+}
+
+extension WeakRefVirtualProxy: TrendingRepoView where T: TrendingRepoView, T.AvatarImage == UIImage {
+    func display(_ model: TrendingRepoViewModel<UIImage>) {
+        object?.display(model)
     }
 }

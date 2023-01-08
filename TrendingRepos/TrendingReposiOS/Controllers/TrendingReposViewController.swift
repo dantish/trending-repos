@@ -30,6 +30,7 @@ public final class TrendingReposViewController: UIViewController, TrendingReposL
             }
         }
     }()
+    private var isUserInitiatedRefresh = false
 
     @IBOutlet private(set) weak var tableView: UITableView!
     @IBOutlet private(set) weak var errorView: TrendingReposLoadErrorView!
@@ -40,7 +41,7 @@ public final class TrendingReposViewController: UIViewController, TrendingReposL
         super.viewDidLoad()
 
         configureTableView()
-        refresh()
+        onRefresh?()
     }
 
     private func configureTableView() {
@@ -50,6 +51,7 @@ public final class TrendingReposViewController: UIViewController, TrendingReposL
     }
 
     @objc private func refresh() {
+        isUserInitiatedRefresh = true
         onRefresh?()
     }
 
@@ -64,15 +66,17 @@ public final class TrendingReposViewController: UIViewController, TrendingReposL
     private var numberOfLoadingCells: Int { 20 }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
-        guard viewModel.isLoading else {
-            tableView.refreshControl?.endRefreshing()
+        guard !isUserInitiatedRefresh else {
+            if viewModel.isLoading {
+                tableView.refreshControl?.beginRefreshing()
+            } else {
+                isUserInitiatedRefresh = false
+                tableView.refreshControl?.endRefreshing()
+            }
             return
         }
 
-        guard dataSource.snapshot().numberOfItems == 0 else {
-            tableView.refreshControl?.beginRefreshing()
-            return
-        }
+        guard viewModel.isLoading else { return }
 
         var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])

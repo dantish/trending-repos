@@ -30,8 +30,8 @@ final class TrendingReposLoaderPresentationAdapter {
                     case let .failure(error):
                         self?.presenter?.didFinishLoadingRepos(with: error)
                     }
-                }, receiveValue: { [weak self] _ in
-                    self?.presenter?.didFinishLoadingRepos(with: [])
+                }, receiveValue: { [weak self] repos in
+                    self?.presenter?.didFinishLoadingRepos(with: repos)
                 })
     }
 }
