@@ -32,7 +32,7 @@ public final class TrendingReposViewController: UIViewController {
     }()
 
     @IBOutlet private(set) weak var tableView: UITableView!
-    @IBOutlet private(set) weak var errorView: TrendingReposErrorView!
+    @IBOutlet private(set) weak var errorView: TrendingReposLoadErrorView!
 
     public var onRefresh: (() -> Void)?
 

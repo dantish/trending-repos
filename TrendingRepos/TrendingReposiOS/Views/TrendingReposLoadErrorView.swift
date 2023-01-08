@@ -1,5 +1,5 @@
 //
-//  TrendingReposErrorView.swift
+//  TrendingReposLoadErrorView.swift
 //  TrendingReposiOS
 //
 //  Created by Daniel Tischenko on 06.01.2023.
@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-final class TrendingReposErrorView: UIView {
+final class TrendingReposLoadErrorView: UIView {
 
     var title: String? {
         get {

@@ -24,7 +24,7 @@
 		DB55293D296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */; };
 		DB55293E296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */; };
 		DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */; };
-		DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */; };
+		DB5529422968ADC800DBA07E /* TrendingReposLoadErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529412968ADC800DBA07E /* TrendingReposLoadErrorView.swift */; };
 		DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */; };
 		DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */; };
 		DB5529572969857C00DBA07E /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB55294F2969857C00DBA07E /* TrendingRepos.framework */; };
@@ -87,7 +87,7 @@
 		DB55293B296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_dark.png; sourceTree = "<group>"; };
 		DB55293C296830B300DBA07E /* TRENDING_REPOS_WITH_CONTENT_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_CONTENT_light.png; sourceTree = "<group>"; };
 		DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
-		DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorView.swift; sourceTree = "<group>"; };
+		DB5529412968ADC800DBA07E /* TrendingReposLoadErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposLoadErrorView.swift; sourceTree = "<group>"; };
 		DB5529442968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewDiffableDataSource+Extensions.swift"; sourceTree = "<group>"; };
 		DB5529462968CA1F00DBA07E /* TrendingRepoCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCellController.swift; sourceTree = "<group>"; };
 		DB55294F2969857C00DBA07E /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +154,7 @@
 			children = (
 				DB123B672965D6A20023FF02 /* RoundedView.swift */,
 				DB55293F29683D7800DBA07E /* TrendingRepoCell.swift */,
-				DB5529412968ADC800DBA07E /* TrendingReposErrorView.swift */,
+				DB5529412968ADC800DBA07E /* TrendingReposLoadErrorView.swift */,
 				DB03948729644DAF0018786C /* TrendingRepos.storyboard */,
 			);
 			path = Views;
@@ -511,7 +511,7 @@
 			files = (
 				DB5529472968CA1F00DBA07E /* TrendingRepoCellController.swift in Sources */,
 				DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */,
-				DB5529422968ADC800DBA07E /* TrendingReposErrorView.swift in Sources */,
+				DB5529422968ADC800DBA07E /* TrendingReposLoadErrorView.swift in Sources */,
 				DB5529452968C89D00DBA07E /* UITableViewDiffableDataSource+Extensions.swift in Sources */,
 				DB55294029683D7800DBA07E /* TrendingRepoCell.swift in Sources */,
 				DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */,
