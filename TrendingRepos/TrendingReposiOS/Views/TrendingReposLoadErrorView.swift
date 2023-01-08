@@ -16,7 +16,7 @@ final class TrendingReposLoadErrorView: UIView {
         }
         set {
             titleLabel.text = newValue
-            isHidden = false
+            isHidden = message == nil && newValue == nil
         }
     }
 
@@ -26,21 +26,27 @@ final class TrendingReposLoadErrorView: UIView {
         }
         set {
             messageLabel.text = newValue
-            isHidden = false
+            isHidden = title == nil && newValue == nil
         }
     }
 
-    @IBOutlet private weak var animationView: LottieAnimationView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var messageLabel: UILabel!
-    @IBOutlet private weak var retryButton: UIButton!
+    var onRetry: (() -> Void)?
+
+    @IBOutlet private(set) weak var animationView: LottieAnimationView!
+    @IBOutlet private(set) weak var titleLabel: UILabel!
+    @IBOutlet private(set) weak var messageLabel: UILabel!
+    @IBOutlet private(set) weak var retryButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
         setup()
     }
 
     private func setup() {
+        title = nil
+        message = nil
+        
         configureAnimationView()
         configureRetryButton()
     }
@@ -54,5 +60,9 @@ final class TrendingReposLoadErrorView: UIView {
         retryButton.layer.cornerRadius = 6
         retryButton.layer.borderColor = UIColor.systemGreen.cgColor
         retryButton.layer.borderWidth = 1
+    }
+
+    @IBAction private func retry() {
+        onRetry?()
     }
 }

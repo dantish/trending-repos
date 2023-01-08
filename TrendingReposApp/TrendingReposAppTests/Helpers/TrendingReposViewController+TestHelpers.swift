@@ -23,6 +23,22 @@ extension TrendingReposViewController {
         tableView.refreshControl?.isRefreshing ?? false
     }
 
+    var isShowingError: Bool {
+        !errorView.isHidden
+    }
+
+    var errorTitle: String? {
+        errorView.title
+    }
+
+    var errorMessage: String? {
+        errorView.message
+    }
+
+    func simulateRetryAction() {
+        errorView.retryButton.simulate(event: .touchUpInside)
+    }
+
     func numberOfRenderedRepoViews() -> Int {
         guard !isShowingLoadingIndicator else { return 0 }
         

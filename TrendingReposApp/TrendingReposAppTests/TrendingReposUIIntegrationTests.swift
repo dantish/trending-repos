@@ -128,6 +128,25 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         assertThat(sut, isRendering: [repo0])
     }
 
+    func test_loadReposCompletion_rendersErrorUntilRetry() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        XCTAssertFalse(sut.isShowingError, "Expected error to be hidden once view is loaded")
+        XCTAssertNil(sut.errorTitle, "Expected no error title once loading is loaded")
+        XCTAssertNil(sut.errorMessage, "Expected no error message once view is loaded")
+
+        loader.completeReposLoadingWithError(at: 0)
+        XCTAssertTrue(sut.isShowingError, "Expected error to be shown once loading completes with error")
+        XCTAssertNotNil(sut.errorTitle, "Expected error title once loading completes with error")
+        XCTAssertNotNil(sut.errorMessage, "Expected error message once loading completes with error")
+
+        sut.simulateRetryAction()
+        XCTAssertFalse(sut.isShowingError, "Expected error to be hidden on retry action")
+        XCTAssertNil(sut.errorTitle, "Expected no error title on retry action")
+        XCTAssertNil(sut.errorMessage, "Expected no error message on retry action")
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {

@@ -41,6 +41,7 @@ public final class TrendingReposViewController: UIViewController, TrendingReposL
         super.viewDidLoad()
 
         configureTableView()
+        errorView.onRetry = onRefresh
         onRefresh?()
     }
 
