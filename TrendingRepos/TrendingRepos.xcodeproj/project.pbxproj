@@ -22,6 +22,7 @@
 		DB08A672296BBCB500BCC491 /* ReposMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A671296BBCB500BCC491 /* ReposMapper.swift */; };
 		DB08A674296BCA1300BCC491 /* OwnerAvatarDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A673296BCA1300BCC491 /* OwnerAvatarDataMapperTests.swift */; };
 		DB08A676296BCA1F00BCC491 /* OwnerAvatarDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A675296BCA1F00BCC491 /* OwnerAvatarDataMapper.swift */; };
+		DB08A679296BCB1B00BCC491 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A678296BCB1B00BCC491 /* HTTPURLResponse+StatusCode.swift */; };
 		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
 		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
 		DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */; };
@@ -93,6 +94,7 @@
 		DB08A671296BBCB500BCC491 /* ReposMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposMapper.swift; sourceTree = "<group>"; };
 		DB08A673296BCA1300BCC491 /* OwnerAvatarDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAvatarDataMapperTests.swift; sourceTree = "<group>"; };
 		DB08A675296BCA1F00BCC491 /* OwnerAvatarDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerAvatarDataMapper.swift; sourceTree = "<group>"; };
+		DB08A678296BCB1B00BCC491 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		DB123B672965D6A20023FF02 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_dark.png; sourceTree = "<group>"; };
 		DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorViewModel.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		DB08A664296BB29700BCC491 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DB08A677296BCB0600BCC491 /* Helpers */,
 				DB08A665296BB2CA00BCC491 /* HTTPClient.swift */,
 				DB08A66D296BB4E400BCC491 /* URLSessionHTTPClient.swift */,
 				DB08A671296BBCB500BCC491 /* ReposMapper.swift */,
@@ -226,6 +229,14 @@
 			isa = PBXGroup;
 			children = (
 				DB08A66B296BB44A00BCC491 /* URLProtocolStub.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DB08A677296BCB0600BCC491 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB08A678296BCB1B00BCC491 /* HTTPURLResponse+StatusCode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -587,6 +598,7 @@
 				DB5529662969893900DBA07E /* Repo.swift in Sources */,
 				DB08A66E296BB4E400BCC491 /* URLSessionHTTPClient.swift in Sources */,
 				DB552971296997F400DBA07E /* TrendingReposLoadingViewModel.swift in Sources */,
+				DB08A679296BCB1B00BCC491 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB08A676296BCA1F00BCC491 /* OwnerAvatarDataMapper.swift in Sources */,
