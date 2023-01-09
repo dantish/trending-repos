@@ -7,6 +7,20 @@
 
 import Foundation
 import Combine
+import TrendingRepos
+
+public extension HTTPClient {
+    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
+
+    func getPublisher(url: URL) -> Publisher {
+        Deferred {
+            Future { completion in
+                get(from: url, completion: completion)
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
 
 extension Publisher {
     func dispatchOnMainQueue() -> AnyPublisher<Output, Failure> {
