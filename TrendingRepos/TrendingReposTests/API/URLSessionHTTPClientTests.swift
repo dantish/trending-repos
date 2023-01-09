@@ -32,24 +32,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
 
     func test_getFromURL_failsOnRequestError() {
-        URLProtocolStub.stub(data: nil, response: nil, error: anyNSError())
-
-        let sut = makeSUT()
-        let exp = expectation(description: "Wait for completion")
-
-        var receivedResult: HTTPClient.Result!
-        sut.get(from: anyURL()) { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1.0)
-
-        switch receivedResult {
-        case .failure:
-            break
-        default:
-            XCTFail("Expected failure, got \(String(describing: receivedResult)) instead")
-        }
+        XCTAssertNotNil(resultErrorFor((data: nil, response: nil, error: anyNSError())))
     }
 
     // MARK: - Helpers
@@ -62,6 +45,42 @@ class URLSessionHTTPClientTests: XCTestCase {
         let sut = URLSessionHTTPClient(session: session)
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
+    }
+
+    private func resultErrorFor(
+        _ values: (data: Data?, response: URLResponse?, error: Error?)? = nil,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> Error? {
+        let result = resultFor(values, file: file, line: line)
+
+        switch result {
+        case let .failure(error):
+            return error
+        default:
+            XCTFail("Expected failure, got \(result) instead", file: file, line: line)
+            return nil
+        }
+    }
+
+    private func resultFor(
+        _ values: (data: Data?, response: URLResponse?, error: Error?)?,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> HTTPClient.Result {
+        values.map { URLProtocolStub.stub(data: $0, response: $1, error: $2) }
+
+        let sut = makeSUT(file: file, line: line)
+        let exp = expectation(description: "Wait for completion")
+
+        var receivedResult: HTTPClient.Result!
+        sut.get(from: anyURL()) { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+
+        wait(for: [exp], timeout: 1.0)
+        return receivedResult
     }
 
 }
