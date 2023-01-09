@@ -17,6 +17,8 @@ public final class URLSessionHTTPClient: HTTPClient {
     private struct UnexpectedValuesRepresentation: Error {}
 
     public func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
-        session.dataTask(with: url).resume()
+        session.dataTask(with: url) { _, _, error in
+            completion(.failure(error ?? NSError(domain: "any domain", code: 0)))
+        }.resume()
     }
 }
