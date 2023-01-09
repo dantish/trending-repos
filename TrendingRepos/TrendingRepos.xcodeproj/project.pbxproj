@@ -14,6 +14,7 @@
 		DB03948C29644E020018786C /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03948B29644E020018786C /* TrendingReposViewController.swift */; };
 		DB039491296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */; };
 		DB08A661296BA66800BCC491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB08A660296BA66800BCC491 /* Assets.xcassets */; };
+		DB08A666296BB2CA00BCC491 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A665296BB2CA00BCC491 /* HTTPClient.swift */; };
 		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
 		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
 		DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */; };
@@ -77,6 +78,7 @@
 		DB03948D29644E380018786C /* TrendingReposLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposLoadingViewModel.swift; sourceTree = "<group>"; };
 		DB039490296450010018786C /* TRENDING_REPOS_WITH_LOADING_STATE_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_light.png; sourceTree = "<group>"; };
 		DB08A660296BA66800BCC491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB08A665296BB2CA00BCC491 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DB123B672965D6A20023FF02 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_dark.png; sourceTree = "<group>"; };
 		DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +186,14 @@
 			path = snapshots;
 			sourceTree = "<group>";
 		};
+		DB08A664296BB29700BCC491 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DB08A665296BB2CA00BCC491 /* HTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		DB3C49F72964400B00D8AA9B = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +267,7 @@
 		DB5529502969857C00DBA07E /* TrendingRepos */ = {
 			isa = PBXGroup;
 			children = (
+				DB08A664296BB29700BCC491 /* API */,
 				DB5529642969891E00DBA07E /* Domain */,
 				DB55296C2969904300DBA07E /* Presentation */,
 			);
@@ -541,6 +552,7 @@
 				DB552972296997F400DBA07E /* TrendingReposErrorViewModel.swift in Sources */,
 				DB55296E2969905800DBA07E /* TrendingReposPresenter.swift in Sources */,
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
+				DB08A666296BB2CA00BCC491 /* HTTPClient.swift in Sources */,
 				DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */,
 				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
 				DB5529832969D5C900DBA07E /* TrendingRepoPresenter.swift in Sources */,
