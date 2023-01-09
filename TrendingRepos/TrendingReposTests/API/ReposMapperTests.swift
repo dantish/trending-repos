@@ -29,4 +29,12 @@ class ReposMapperTests: XCTestCase {
         )
     }
 
+    func test_map_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() throws {
+        let emptyListJSON = try! JSONSerialization.data(withJSONObject: ["items": []])
+
+        let result = try ReposMapper.map(emptyListJSON, from: HTTPURLResponse(statusCode: 200))
+
+        XCTAssertEqual(result, [])
+    }
+
 }
