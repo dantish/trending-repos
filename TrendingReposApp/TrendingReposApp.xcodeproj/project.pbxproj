@@ -28,6 +28,7 @@
 		DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */; };
 		DB08A65D296B8CA900BCC491 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */; };
 		DB08A65F296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */; };
+		DB08A663296BA99E00BCC491 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposUIIntegrationTests+Assertions.swift"; sourceTree = "<group>"; };
 		DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoAvatarDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */,
 				DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */,
 				DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */,
+				DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */,
 				DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */,
 				DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */,
 				DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */,
@@ -287,6 +290,7 @@
 				DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */,
 				DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */,
 				DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */,
+				DB08A663296BA99E00BCC491 /* UIImage+TestHelpers.swift in Sources */,
 				DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */,
