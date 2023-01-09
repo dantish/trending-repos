@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Combine
+import TrendingRepos
+import TrendingReposiOS
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -18,6 +21,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func configureWindow() {
+        window?.rootViewController = UINavigationController(
+            rootViewController: TrendingReposUIComposer.trendingReposComposedWith(
+                reposLoader: { Empty().eraseToAnyPublisher() },
+                avatarLoader: { _ in Empty().eraseToAnyPublisher() }
+            )
+        )
+
         window?.makeKeyAndVisible()
     }
 }
