@@ -218,6 +218,21 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertEqual(view1?.renderedAvatar, avatarData1, "Expected avatar for second view once second avatar loading completes successfully")
     }
 
+    func test_loadAvatarCompletion_dispatchesFromBackgroundToMainThread() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeReposLoading(with: [makeRepo()])
+        sut.simulateRepoViewVisible(at: 0)
+
+        let exp = expectation(description: "Wait for background queue")
+        DispatchQueue.global().async {
+            loader.completeAvatarLoading(with: self.anyAvatarData(), at: 0)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {

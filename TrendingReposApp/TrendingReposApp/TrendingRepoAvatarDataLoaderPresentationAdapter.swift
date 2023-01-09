@@ -25,6 +25,7 @@ final class TrendingRepoAvatarDataLoaderPresentationAdapter<View: TrendingRepoVi
         presenter?.didStartLoadingAvatarImageData(for: repo)
 
         cancellable = avatarLoader(repo.owner.avatarUrl)
+            .dispatchOnMainQueue()
             .sink(
                 receiveCompletion: { [weak self, repo] completion in
                     switch completion {
