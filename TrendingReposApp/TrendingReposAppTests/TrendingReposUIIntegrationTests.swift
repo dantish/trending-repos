@@ -176,6 +176,26 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertEqual(loader.loadedAvatarURLs, [repo0.owner.avatarUrl, repo1.owner.avatarUrl], "Expected second avatar URL request once second view also becomes visible")
     }
 
+    func test_repoViewAvatarPlaceholder_isVisibleWhileLoadingAvatarOrWhenLoadingFailed() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeReposLoading(with: [makeRepo(), makeRepo()])
+
+        let view0 = sut.simulateRepoViewVisible(at: 0)
+        let view1 = sut.simulateRepoViewVisible(at: 1)
+        XCTAssertEqual(view0?.isShowingAvatarPlaceholder, true, "Expected avatar placeholder for first view while loading first avatar")
+        XCTAssertEqual(view1?.isShowingAvatarPlaceholder, true, "Expected avatar placeholder for second view while loading second avatar")
+
+        loader.completeAvatarLoading(with: anyAvatarData(), at: 0)
+        XCTAssertEqual(view0?.isShowingAvatarPlaceholder, false, "Expected no avatar placeholder for first view once first avatar loading completes successfully")
+        XCTAssertEqual(view1?.isShowingAvatarPlaceholder, true, "Expected no avatar placeholder state change for second view once first avatar loading completes successfully")
+
+        loader.completeAvatarLoadingWithError(at: 1)
+        XCTAssertEqual(view0?.isShowingAvatarPlaceholder, false, "Expected no avatar placeholder state change for first view once second avatar loading completes with error")
+        XCTAssertEqual(view1?.isShowingAvatarPlaceholder, true, "Expected avatar placeholder for second view once second avatar loading completes with error")
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
@@ -206,6 +226,10 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
                 avatarUrl: ownerAvatarUrl
             )
         )
+    }
+
+    private func anyAvatarData() -> Data {
+        return UIImage.make(withColor: .red).pngData()!
     }
 
     private class LoaderSpy {

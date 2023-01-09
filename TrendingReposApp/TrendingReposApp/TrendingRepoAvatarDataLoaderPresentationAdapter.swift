@@ -23,6 +23,10 @@ final class TrendingRepoAvatarDataLoaderPresentationAdapter<View: TrendingRepoVi
 
     func didRequestAvatar() {
         presenter?.didStartLoadingAvatarImageData(for: repo)
-        avatarLoader(repo.owner.avatarUrl)
+
+        cancellable = avatarLoader(repo.owner.avatarUrl)
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self, repo] data in
+                self?.presenter?.didFinishLoadingAvatarImageData(with: data, for: repo)
+            })
     }
 }

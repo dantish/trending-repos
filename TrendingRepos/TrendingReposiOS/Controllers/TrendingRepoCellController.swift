@@ -27,7 +27,10 @@ public final class TrendingRepoCellController: TrendingRepoView {
     public func display(_ viewModel: TrendingRepoViewModel<UIImage>) {
         cell?.nameLabel.text = viewModel.name
         cell?.ownerNameLabel.text = viewModel.ownerName
-        cell?.ownerAvatarImageView.image = viewModel.ownerAvatar
+
+        if let avatar = viewModel.ownerAvatar {
+            cell?.ownerAvatarImageView.image = avatar
+        }
     }
 }
 

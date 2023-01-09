@@ -31,7 +31,7 @@ final class TrendingReposViewAdapter: TrendingReposView {
 
             adapter.presenter = TrendingRepoPresenter<WeakRefVirtualProxy<TrendingRepoCellController>, UIImage>(
                 view: WeakRefVirtualProxy(view),
-                avatarImageTransformer: { _ in nil }
+                avatarImageTransformer: UIImage.init
             )
 
             return view
