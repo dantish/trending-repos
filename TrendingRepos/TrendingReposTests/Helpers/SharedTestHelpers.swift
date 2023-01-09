@@ -16,17 +16,31 @@ func anyURL() -> URL {
     URL(string: "http://any-url.com")!
 }
 
+func anyData() -> Data {
+    Data("any data".utf8)
+}
+
+func uniqueID() -> Int {
+    Int.random(in: 1...Int.max)
+}
+
 func uniqueRepo() -> Repo {
     Repo(
-        id: UUID(),
+        id: uniqueID(),
         name: "any name",
         description: "any description",
         language: "any language",
         starsCount: 100,
         owner: RepoOwner(
-            id: UUID(),
+            id: uniqueID(),
             username: "any username",
             avatarUrl: anyURL()
         )
     )
+}
+
+extension HTTPURLResponse {
+    convenience init(statusCode: Int) {
+        self.init(url: anyURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
+    }
 }

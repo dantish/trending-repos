@@ -8,11 +8,11 @@
 import Foundation
 
 public struct RepoOwner: Hashable {
-    public let id: UUID
+    public let id: Int
     public let username: String
     public let avatarUrl: URL
 
-    public init(id: UUID, username: String, avatarUrl: URL) {
+    public init(id: Int, username: String, avatarUrl: URL) {
         self.id = id
         self.username = username
         self.avatarUrl = avatarUrl
