@@ -20,4 +20,12 @@ class OwnerAvatarDataMapperTests: XCTestCase {
         }
     }
 
+    func test_map_deliversInvalidDataErrorOn200HTTPResponseWithEmptyData() {
+        let emptyData = Data()
+
+        XCTAssertThrowsError(
+            try OwnerAvatarDataMapper.map(emptyData, from: HTTPURLResponse(statusCode: 200))
+        )
+    }
+
 }
