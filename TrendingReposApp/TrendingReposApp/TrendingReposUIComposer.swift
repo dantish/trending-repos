@@ -14,7 +14,8 @@ public final class TrendingReposUIComposer {
     private init() {}
 
     public static func trendingReposComposedWith(
-        reposLoader: @escaping () -> AnyPublisher<[Repo], Error>
+        reposLoader: @escaping () -> AnyPublisher<[Repo], Error>,
+        avatarLoader: @escaping (URL) -> AnyPublisher<Data, Error>
     ) -> TrendingReposViewController {
         let presentationAdapter = TrendingReposLoaderPresentationAdapter(reposLoader: reposLoader)
 
@@ -23,7 +24,7 @@ public final class TrendingReposUIComposer {
         trendingReposController.onRefresh = presentationAdapter.didRequestTrendingReposRefresh
 
         presentationAdapter.presenter = TrendingReposPresenter(
-            reposView: TrendingReposViewAdapter(controller: trendingReposController),
+            reposView: TrendingReposViewAdapter(controller: trendingReposController, avatarLoader: avatarLoader),
             loadingView: WeakRefVirtualProxy(trendingReposController),
             errorView: WeakRefVirtualProxy(trendingReposController)
         )

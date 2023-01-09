@@ -27,6 +27,7 @@
 		DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */; };
 		DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */; };
 		DB08A65D296B8CA900BCC491 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */; };
+		DB08A65F296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingRepoCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposUIIntegrationTests+Assertions.swift"; sourceTree = "<group>"; };
 		DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
+		DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoAvatarDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */,
 				DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */,
 				DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */,
+				DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */,
 				DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */,
 				DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */,
 				DB08A618296A066D00BCC491 /* Assets.xcassets */,
@@ -272,6 +275,7 @@
 				DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */,
 				DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */,
 				DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */,
+				DB08A65F296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift in Sources */,
 				DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

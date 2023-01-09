@@ -11,8 +11,8 @@ import TrendingRepos
 
 public final class TrendingReposViewController: UIViewController, TrendingReposLoadingView, TrendingReposErrorView {
 
-    private typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
-    private typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
+    typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
+    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
 
     enum DataSourceItem: Hashable {
         case loading(Int)

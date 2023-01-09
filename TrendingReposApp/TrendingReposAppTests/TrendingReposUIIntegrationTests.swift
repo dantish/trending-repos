@@ -159,11 +159,28 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         wait(for: [exp], timeout: 1.0)
     }
 
+    func test_repoView_loadsAvatarURLWhenVisible() {
+        let repo0 = makeRepo(ownerAvatarUrl: URL(string: "http://url-0.com")!)
+        let repo1 = makeRepo(ownerAvatarUrl: URL(string: "http://url-1.com")!)
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeReposLoading(with: [repo0, repo1])
+
+        XCTAssertEqual(loader.loadedAvatarURLs, [], "Expected no avatar URL requests until views become visible")
+
+        sut.simulateRepoViewVisible(at: 0)
+        XCTAssertEqual(loader.loadedAvatarURLs, [repo0.owner.avatarUrl], "Expected first avatar URL request once first view becomes visible")
+
+        sut.simulateRepoViewVisible(at: 1)
+        XCTAssertEqual(loader.loadedAvatarURLs, [repo0.owner.avatarUrl, repo1.owner.avatarUrl], "Expected second avatar URL request once second view also becomes visible")
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
-        let sut = TrendingReposUIComposer.trendingReposComposedWith(reposLoader: loader.loadPublisher)
+        let sut = TrendingReposUIComposer.trendingReposComposedWith(reposLoader: loader.loadPublisher, avatarLoader: loader.loadAvatarPublisher)
         trackForMemoryLeaks(loader)
         trackForMemoryLeaks(sut)
         return (sut, loader)
@@ -192,10 +209,12 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
     }
 
     private class LoaderSpy {
+        // MARK: - Repos Loader
+
         private var reposRequests = [PassthroughSubject<[Repo], Error>]()
 
         var loadReposCallCount: Int {
-            return reposRequests.count
+            reposRequests.count
         }
 
         func loadPublisher() -> AnyPublisher<[Repo], Error> {
@@ -211,6 +230,29 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         func completeReposLoadingWithError(at index: Int = 0) {
             let error = NSError(domain: "an error", code: 0)
             reposRequests[index].send(completion: .failure(error))
+        }
+
+        // MARK: - Owner's Avatar Loader
+
+        private var avatarRequests = [(url: URL, publisher: PassthroughSubject<Data, Error>)]()
+
+        var loadedAvatarURLs: [URL] {
+            avatarRequests.map(\.url)
+        }
+
+        func loadAvatarPublisher(from url: URL) -> AnyPublisher<Data, Error> {
+            let publisher = PassthroughSubject<Data, Error>()
+            avatarRequests.append((url, publisher))
+            return publisher.eraseToAnyPublisher()
+        }
+
+        func completeAvatarLoading(with avatarData: Data = Data(), at index: Int = 0) {
+            avatarRequests[index].publisher.send(avatarData)
+        }
+
+        func completeAvatarLoadingWithError(at index: Int = 0) {
+            let error = NSError(domain: "an error", code: 0)
+            avatarRequests[index].publisher.send(completion: .failure(error))
         }
     }
 

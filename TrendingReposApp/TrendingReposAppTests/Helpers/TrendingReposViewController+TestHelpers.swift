@@ -13,10 +13,20 @@ extension TrendingReposViewController {
         tableView.refreshControl?.simulatePullToRefresh()
     }
 
-    var isShowingLoadingIndicator: Bool {
-        guard !tableView.visibleCells.isEmpty else { return false }
+    @discardableResult
+    func simulateRepoViewVisible(at index: Int) -> TrendingRepoCell? {
+        return repoView(at: index) as? TrendingRepoCell
+    }
 
-        return tableView.visibleCells.allSatisfy { $0.reuseIdentifier == "TrendingRepoLoadingCell" }
+    var isShowingLoadingIndicator: Bool {
+        guard let items = (tableView.dataSource as? DataSource)?.snapshot().itemIdentifiers, !items.isEmpty else { return false }
+
+        return items.allSatisfy { item in
+            switch item {
+            case .loading: return true
+            default: return false
+            }
+        }
     }
 
     var isShowingUserInitiatedLoadingIndicator: Bool {
