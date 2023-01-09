@@ -20,4 +20,10 @@ extension TrendingRepoCell {
     var ownerUsernameText: String? {
         ownerNameLabel.text
     }
+
+    var renderedAvatar: Data? {
+        guard !isShowingAvatarPlaceholder else { return nil }
+
+        return ownerAvatarImageView.image?.pngData()
+    }
 }

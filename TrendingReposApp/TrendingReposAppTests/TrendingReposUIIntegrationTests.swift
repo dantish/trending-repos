@@ -196,6 +196,28 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         XCTAssertEqual(view1?.isShowingAvatarPlaceholder, true, "Expected avatar placeholder for second view once second avatar loading completes with error")
     }
 
+    func test_repoView_rendersAvatarLoadedFromURL() {
+        let (sut, loader) = makeSUT()
+
+        sut.loadViewIfNeeded()
+        loader.completeReposLoading(with: [makeRepo(), makeRepo()])
+
+        let view0 = sut.simulateRepoViewVisible(at: 0)
+        let view1 = sut.simulateRepoViewVisible(at: 1)
+        XCTAssertEqual(view0?.renderedAvatar, .none, "Expected no avatar for first view while loading first avatar")
+        XCTAssertEqual(view1?.renderedAvatar, .none, "Expected no avatar for second view while loading second avatar")
+
+        let avatarData0 = UIImage.make(withColor: .red).pngData()!
+        loader.completeAvatarLoading(with: avatarData0, at: 0)
+        XCTAssertEqual(view0?.renderedAvatar, avatarData0, "Expected avatar for first view once first avatar loading completes successfully")
+        XCTAssertEqual(view1?.renderedAvatar, .none, "Expected no avatar state change for second view once first avatar loading completes successfully")
+
+        let avatarData1 = UIImage.make(withColor: .blue).pngData()!
+        loader.completeAvatarLoading(with: avatarData1, at: 1)
+        XCTAssertEqual(view0?.renderedAvatar, avatarData0, "Expected no avatar state change for first view once second avatar loading completes successfully")
+        XCTAssertEqual(view1?.renderedAvatar, avatarData1, "Expected avatar for second view once second avatar loading completes successfully")
+    }
+
     // MARK: - Helpers
 
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: TrendingReposViewController, loader: LoaderSpy) {
