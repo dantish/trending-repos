@@ -136,6 +136,12 @@ final class TrendingReposSnapshotTests: XCTestCase {
 
 private extension TrendingReposViewController {
     func display(_ viewModels: [TrendingRepoViewModel<UIImage>]) {
-        display(viewModels.map { TrendingRepoCellController(viewModel: $0) })
+        display(viewModels.map { viewModel in
+            let cell = TrendingRepoCellController()
+            cell.onDidLoad = { [weak cell] in
+                cell?.display(viewModel)
+            }
+            return cell
+        })
     }
 }

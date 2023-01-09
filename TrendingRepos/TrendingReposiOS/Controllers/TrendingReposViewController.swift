@@ -9,10 +9,10 @@ import UIKit
 import Lottie
 import TrendingRepos
 
-public final class TrendingReposViewController: UIViewController {
+public final class TrendingReposViewController: UIViewController, TrendingReposLoadingView, TrendingReposErrorView {
 
-    private typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
-    private typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
+    typealias DataSource = UITableViewDiffableDataSource<Int, DataSourceItem>
+    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Int, DataSourceItem>
 
     enum DataSourceItem: Hashable {
         case loading(Int)
@@ -30,18 +30,30 @@ public final class TrendingReposViewController: UIViewController {
             }
         }
     }()
+    private var isUserInitiatedRefresh = false
 
     @IBOutlet private(set) weak var tableView: UITableView!
-    @IBOutlet private(set) weak var errorView: TrendingReposErrorView!
+    @IBOutlet private(set) weak var errorView: TrendingReposLoadErrorView!
+
+    public var onRefresh: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
         configureTableView()
+        errorView.onRetry = onRefresh
+        onRefresh?()
     }
 
     private func configureTableView() {
         tableView.dataSource = dataSource
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    }
+
+    @objc private func refresh() {
+        isUserInitiatedRefresh = true
+        onRefresh?()
     }
 
     public func display(_ items: [TrendingRepoCellController]) {
@@ -55,6 +67,18 @@ public final class TrendingReposViewController: UIViewController {
     private var numberOfLoadingCells: Int { 20 }
 
     public func display(_ viewModel: TrendingReposLoadingViewModel) {
+        guard !isUserInitiatedRefresh else {
+            if viewModel.isLoading {
+                tableView.refreshControl?.beginRefreshing()
+            } else {
+                isUserInitiatedRefresh = false
+                tableView.refreshControl?.endRefreshing()
+            }
+            return
+        }
+
+        guard viewModel.isLoading else { return }
+
         var snapshot = DataSourceSnapshot()
         snapshot.appendSections([0])
         snapshot.appendItems((0..<numberOfLoadingCells).map(DataSourceItem.loading), toSection: 0)

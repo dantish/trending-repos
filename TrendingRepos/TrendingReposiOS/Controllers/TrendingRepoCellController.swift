@@ -8,21 +8,29 @@
 import UIKit
 import TrendingRepos
 
-public final class TrendingRepoCellController {
+public final class TrendingRepoCellController: TrendingRepoView {
     private let id: UUID
-    private let viewModel: TrendingRepoViewModel<UIImage>
+    private var cell: TrendingRepoCell?
 
-    public init(id: UUID = UUID(), viewModel: TrendingRepoViewModel<UIImage>) {
+    public var onDidLoad: (() -> Void)?
+
+    public init(id: UUID = UUID()) {
         self.id = id
-        self.viewModel = viewModel
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingRepoCell", for: indexPath) as! TrendingRepoCell
-        cell.nameLabel.text = viewModel.name
-        cell.ownerNameLabel.text = viewModel.ownerName
-        cell.ownerAvatarImageView.image = viewModel.ownerAvatar
-        return cell
+        cell = tableView.dequeueReusableCell(withIdentifier: "TrendingRepoCell", for: indexPath) as? TrendingRepoCell
+        onDidLoad?()
+        return cell!
+    }
+
+    public func display(_ viewModel: TrendingRepoViewModel<UIImage>) {
+        cell?.nameLabel.text = viewModel.name
+        cell?.ownerNameLabel.text = viewModel.ownerName
+
+        if let avatar = viewModel.ownerAvatar {
+            cell?.ownerAvatarImageView.image = avatar
+        }
     }
 }
 

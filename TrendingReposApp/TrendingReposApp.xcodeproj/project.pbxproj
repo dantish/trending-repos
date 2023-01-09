@@ -11,11 +11,24 @@
 		DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A611296A066C00BCC491 /* SceneDelegate.swift */; };
 		DB08A619296A066D00BCC491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB08A618296A066D00BCC491 /* Assets.xcassets */; };
 		DB08A61C296A066D00BCC491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */; };
-		DB08A627296A066E00BCC491 /* TrendingReposAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */; };
+		DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A626296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift */; };
 		DB08A642296A0D9F00BCC491 /* TrendingRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */; };
 		DB08A643296A0D9F00BCC491 /* TrendingRepos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB08A644296A0D9F00BCC491 /* TrendingReposiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; };
 		DB08A645296A0D9F00BCC491 /* TrendingReposiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */; };
+		DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */; };
+		DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */; };
+		DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */; };
+		DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */; };
+		DB08A653296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */; };
+		DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */; };
+		DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */; };
+		DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */; };
+		DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */; };
+		DB08A65D296B8CA900BCC491 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */; };
+		DB08A65F296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */; };
+		DB08A663296BA99E00BCC491 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +64,22 @@
 		DB08A61B296A066D00BCC491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB08A61D296A066D00BCC491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB08A622296A066E00BCC491 /* TrendingReposAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingReposAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposAppTests.swift; sourceTree = "<group>"; };
+		DB08A626296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposUIIntegrationTests.swift; sourceTree = "<group>"; };
 		DB08A640296A0D9F00BCC491 /* TrendingRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TrendingReposiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposUIComposer.swift; sourceTree = "<group>"; };
+		DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewAdapter.swift; sourceTree = "<group>"; };
+		DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
+		DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingRepoCell+TestHelpers.swift"; sourceTree = "<group>"; };
+		DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingReposUIIntegrationTests+Assertions.swift"; sourceTree = "<group>"; };
+		DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
+		DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoAvatarDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +126,12 @@
 			children = (
 				DB08A60F296A066C00BCC491 /* AppDelegate.swift */,
 				DB08A611296A066C00BCC491 /* SceneDelegate.swift */,
+				DB08A647296A12EE00BCC491 /* TrendingReposUIComposer.swift */,
+				DB08A649296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift */,
+				DB08A654296B49C500BCC491 /* TrendingReposViewAdapter.swift */,
+				DB08A65E296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift */,
+				DB08A656296B654600BCC491 /* WeakRefVirtualProxy.swift */,
+				DB08A65C296B8CA900BCC491 /* CombineHelpers.swift */,
 				DB08A618296A066D00BCC491 /* Assets.xcassets */,
 				DB08A61A296A066D00BCC491 /* LaunchScreen.storyboard */,
 				DB08A61D296A066D00BCC491 /* Info.plist */,
@@ -110,7 +142,8 @@
 		DB08A625296A066E00BCC491 /* TrendingReposAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				DB08A626296A066E00BCC491 /* TrendingReposAppTests.swift */,
+				DB08A64B296A1FEA00BCC491 /* Helpers */,
+				DB08A626296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift */,
 			);
 			path = TrendingReposAppTests;
 			sourceTree = "<group>";
@@ -122,6 +155,20 @@
 				DB08A641296A0D9F00BCC491 /* TrendingReposiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB08A64B296A1FEA00BCC491 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB08A64C296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift */,
+				DB08A650296A249B00BCC491 /* UIControl+TestHelpers.swift */,
+				DB08A64E296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift */,
+				DB08A662296BA99E00BCC491 /* UIImage+TestHelpers.swift */,
+				DB08A652296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift */,
+				DB08A658296B6DD300BCC491 /* TrendingRepoCell+TestHelpers.swift */,
+				DB08A65A296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +274,12 @@
 			files = (
 				DB08A610296A066C00BCC491 /* AppDelegate.swift in Sources */,
 				DB08A612296A066C00BCC491 /* SceneDelegate.swift in Sources */,
+				DB08A65D296B8CA900BCC491 /* CombineHelpers.swift in Sources */,
+				DB08A648296A12EE00BCC491 /* TrendingReposUIComposer.swift in Sources */,
+				DB08A64A296A186800BCC491 /* TrendingReposLoaderPresentationAdapter.swift in Sources */,
+				DB08A657296B654600BCC491 /* WeakRefVirtualProxy.swift in Sources */,
+				DB08A65F296B92DB00BCC491 /* TrendingRepoAvatarDataLoaderPresentationAdapter.swift in Sources */,
+				DB08A655296B49C500BCC491 /* TrendingReposViewAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB08A627296A066E00BCC491 /* TrendingReposAppTests.swift in Sources */,
+				DB08A659296B6DD400BCC491 /* TrendingRepoCell+TestHelpers.swift in Sources */,
+				DB08A627296A066E00BCC491 /* TrendingReposUIIntegrationTests.swift in Sources */,
+				DB08A65B296B7B6E00BCC491 /* TrendingReposUIIntegrationTests+Assertions.swift in Sources */,
+				DB08A663296BA99E00BCC491 /* UIImage+TestHelpers.swift in Sources */,
+				DB08A64F296A20F300BCC491 /* UIRefreshControl+TestHelpers.swift in Sources */,
+				DB08A64D296A201200BCC491 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				DB08A651296A249B00BCC491 /* UIControl+TestHelpers.swift in Sources */,
+				DB08A653296A257000BCC491 /* TrendingReposViewController+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
