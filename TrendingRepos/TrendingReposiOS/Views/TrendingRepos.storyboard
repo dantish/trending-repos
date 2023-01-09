@@ -136,13 +136,13 @@
                                 </prototypes>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdb-YI-uvZ" customClass="TrendingReposLoadErrorView" customModule="TrendingReposiOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-FL-VFM">
-                                        <rect key="frame" x="25" y="10" width="343" height="675"/>
+                                        <rect key="frame" x="25" y="10" width="343" height="734"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="t7V-fq-raV">
-                                                <rect key="frame" x="0.0" y="151.99999999999997" width="343" height="371.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="181.33333333333334" width="343" height="371.33333333333326"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-h5-zab" customClass="LottieAnimationView" customModule="Lottie">
                                                         <rect key="frame" x="21.666666666666657" y="0.0" width="300" height="300"/>
@@ -158,7 +158,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXJ-rr-Cbx">
-                                                                <rect key="frame" x="0.0" y="28.333333333333371" width="278.33333333333331" height="18"/>
+                                                                <rect key="frame" x="0.0" y="28.333333333333258" width="278.33333333333331" height="18"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -176,7 +176,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iib-rN-Jgj">
-                                        <rect key="frame" x="25" y="695" width="343" height="44"/>
+                                        <rect key="frame" x="25" y="754" width="343" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="LsJ-00-CDE"/>
                                         </constraints>
@@ -215,12 +215,12 @@
                         <constraints>
                             <constraint firstItem="Yo6-bZ-RQ7" firstAttribute="trailing" secondItem="zdb-YI-uvZ" secondAttribute="trailing" id="CPb-BZ-f9n"/>
                             <constraint firstItem="fZV-Zj-wWm" firstAttribute="top" secondItem="JQQ-Kk-zCB" secondAttribute="top" id="HX5-6N-keM"/>
-                            <constraint firstItem="Yo6-bZ-RQ7" firstAttribute="bottom" secondItem="zdb-YI-uvZ" secondAttribute="bottom" id="PJJ-0c-SYq"/>
+                            <constraint firstAttribute="bottom" secondItem="zdb-YI-uvZ" secondAttribute="bottom" id="PJJ-0c-SYq"/>
                             <constraint firstAttribute="trailing" secondItem="fZV-Zj-wWm" secondAttribute="trailing" id="YHk-kj-cEB"/>
                             <constraint firstItem="fZV-Zj-wWm" firstAttribute="leading" secondItem="JQQ-Kk-zCB" secondAttribute="leading" id="a0m-VA-cJP"/>
                             <constraint firstAttribute="bottom" secondItem="fZV-Zj-wWm" secondAttribute="bottom" id="dgr-Yf-anb"/>
                             <constraint firstItem="zdb-YI-uvZ" firstAttribute="leading" secondItem="Yo6-bZ-RQ7" secondAttribute="leading" id="nHP-ID-QzN"/>
-                            <constraint firstItem="zdb-YI-uvZ" firstAttribute="top" secondItem="Yo6-bZ-RQ7" secondAttribute="top" id="x4P-4a-W44"/>
+                            <constraint firstItem="zdb-YI-uvZ" firstAttribute="top" secondItem="JQQ-Kk-zCB" secondAttribute="top" id="x4P-4a-W44"/>
                         </constraints>
                     </view>
                     <connections>
