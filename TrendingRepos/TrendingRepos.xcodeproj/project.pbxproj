@@ -18,6 +18,8 @@
 		DB08A669296BB41200BCC491 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A668296BB41200BCC491 /* URLSessionHTTPClientTests.swift */; };
 		DB08A66C296BB44A00BCC491 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A66B296BB44A00BCC491 /* URLProtocolStub.swift */; };
 		DB08A66E296BB4E400BCC491 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A66D296BB4E400BCC491 /* URLSessionHTTPClient.swift */; };
+		DB08A670296BBC5C00BCC491 /* ReposMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A66F296BBC5C00BCC491 /* ReposMapperTests.swift */; };
+		DB08A672296BBCB500BCC491 /* ReposMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A671296BBCB500BCC491 /* ReposMapper.swift */; };
 		DB123B682965D6A20023FF02 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB123B672965D6A20023FF02 /* RoundedView.swift */; };
 		DB123B6A2965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */; };
 		DB123B6F2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png in Resources */ = {isa = PBXBuildFile; fileRef = DB123B6D2965EF0A0023FF02 /* TRENDING_REPOS_WITH_ERROR_STATE_light.png */; };
@@ -85,6 +87,8 @@
 		DB08A668296BB41200BCC491 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		DB08A66B296BB44A00BCC491 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		DB08A66D296BB4E400BCC491 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		DB08A66F296BBC5C00BCC491 /* ReposMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposMapperTests.swift; sourceTree = "<group>"; };
+		DB08A671296BBCB500BCC491 /* ReposMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposMapper.swift; sourceTree = "<group>"; };
 		DB123B672965D6A20023FF02 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		DB123B692965DC7A0023FF02 /* TRENDING_REPOS_WITH_LOADING_STATE_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TRENDING_REPOS_WITH_LOADING_STATE_dark.png; sourceTree = "<group>"; };
 		DB123B6B2965ED950023FF02 /* TrendingReposErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposErrorViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			children = (
 				DB08A665296BB2CA00BCC491 /* HTTPClient.swift */,
 				DB08A66D296BB4E400BCC491 /* URLSessionHTTPClient.swift */,
+				DB08A671296BBCB500BCC491 /* ReposMapper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			children = (
 				DB08A66A296BB43C00BCC491 /* Helpers */,
 				DB08A668296BB41200BCC491 /* URLSessionHTTPClientTests.swift */,
+				DB08A66F296BBC5C00BCC491 /* ReposMapperTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				DB55296829698A4D00DBA07E /* RepoOwner.swift in Sources */,
 				DB08A666296BB2CA00BCC491 /* HTTPClient.swift in Sources */,
 				DB55297A2969A6EC00DBA07E /* TrendingRepoViewModel.swift in Sources */,
+				DB08A672296BBCB500BCC491 /* ReposMapper.swift in Sources */,
 				DB552970296994FA00DBA07E /* TrendingReposViewModel.swift in Sources */,
 				DB5529832969D5C900DBA07E /* TrendingRepoPresenter.swift in Sources */,
 			);
@@ -595,6 +602,7 @@
 				DB08A669296BB41200BCC491 /* URLSessionHTTPClientTests.swift in Sources */,
 				DB5529812969D50200DBA07E /* TrendingRepoPresenterTests.swift in Sources */,
 				DB55297F2969D42F00DBA07E /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				DB08A670296BBC5C00BCC491 /* ReposMapperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
