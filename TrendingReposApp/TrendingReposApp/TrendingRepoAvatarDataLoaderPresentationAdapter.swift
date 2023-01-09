@@ -25,8 +25,16 @@ final class TrendingRepoAvatarDataLoaderPresentationAdapter<View: TrendingRepoVi
         presenter?.didStartLoadingAvatarImageData(for: repo)
 
         cancellable = avatarLoader(repo.owner.avatarUrl)
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self, repo] data in
-                self?.presenter?.didFinishLoadingAvatarImageData(with: data, for: repo)
-            })
+            .sink(
+                receiveCompletion: { [weak self, repo] completion in
+                    switch completion {
+                    case .finished: break
+
+                    case let .failure(error):
+                        self?.presenter?.didFinishLoadingAvatarImageData(with: error, for: repo)
+                    }
+                }, receiveValue: { [weak self, repo] data in
+                    self?.presenter?.didFinishLoadingAvatarImageData(with: data, for: repo)
+                })
     }
 }
