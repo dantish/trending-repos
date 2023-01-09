@@ -252,17 +252,21 @@ final class TrendingReposUIIntegrationTests: XCTestCase {
         ownerAvatarUrl: URL = URL(string: "http://any-url.com")!
     ) -> Repo {
         Repo(
-            id: UUID(),
+            id: uniqueID(),
             name: name,
             description: description,
             language: language,
             starsCount: starsCount,
             owner: RepoOwner(
-                id: UUID(),
+                id: uniqueID(),
                 username: ownerUsername,
                 avatarUrl: ownerAvatarUrl
             )
         )
+    }
+
+    private func uniqueID() -> Int {
+        Int.random(in: 1...Int.max)
     }
 
     private func anyAvatarData() -> Data {
