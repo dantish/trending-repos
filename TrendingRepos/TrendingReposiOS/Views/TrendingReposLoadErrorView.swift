@@ -54,6 +54,7 @@ final class TrendingReposLoadErrorView: UIView {
     private func configureAnimationView() {
         animationView.animation = LottieAnimation.named("SomethingWentWrongAnimation", bundle: Bundle(for: Self.self))
         animationView.loopMode = .loop
+        animationView.play()
     }
 
     private func configureRetryButton() {
